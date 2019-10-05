@@ -21,7 +21,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "cross-env CI=true lint-staged"
+      "pre-push": "full-check"
     }
   },
   "prettier": {

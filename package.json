@@ -21,7 +21,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "cross-env CI=true full-check"
+      "pre-push": "cross-env CI=true npm run full-check"
     }
   },
   "prettier": {

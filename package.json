@@ -14,14 +14,14 @@
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "format": "prettier --write src/**/*.{js,json,css,scss}",
-    "full-check": " npm run lint && npm run format && eslint --max-warnings=0 && git add ."
+    "full-check": " npm run lint && npm run format && eslint --max-warnings=0 && react-scripts test --env=jsdom --findRelatedTests && git add ."
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run full-check"
+      "pre-push": "cross-env CI=true full-check"
     }
   },
   "prettier": {
@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^6.0.3",
     "eslint": "^6.5.1",
     "eslint-plugin-react": "^7.16.0",
     "husky": "^3.0.8",

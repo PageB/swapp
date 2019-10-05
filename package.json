@@ -14,7 +14,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "format": "prettier --write src/**/*.{js,json,css,scss}",
-    "full-check": " npm run lint && npm run format && eslint --max-warnings=0 && react-scripts test --env=jsdom --findRelatedTests && git add ."
+    "full-check": " npm run lint && eslint --max-warnings=0 && npm run format && npm run test --bail --findRelatedTests && git add ."
   },
   "eslintConfig": {
     "extends": "react-app"

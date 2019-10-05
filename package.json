@@ -14,7 +14,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "format": "prettier --write src/**/*.{js,json,css,scss}",
-    "full-check": "set CI=true && prettier --write && eslint --max-warnings=0 && react-scripts test && npm run lint && git add ."
+    "full-check": " npm run lint && npm run format && eslint --max-warnings=0 && react-scripts test && git add ."
   },
   "eslintConfig": {
     "extends": "react-app"

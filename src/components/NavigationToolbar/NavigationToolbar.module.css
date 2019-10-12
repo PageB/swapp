@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   background-color: #000;
-  color: #4BD5EE;
+  color: #4bd5ee;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,7 @@
 }
 
 .NavMenu a:hover {
-  color: #FFE300;
+  color: #ffe300;
   margin: 0 4px;
   text-decoration: none;
 }

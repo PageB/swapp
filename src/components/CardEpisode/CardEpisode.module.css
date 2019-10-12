@@ -1,8 +1,8 @@
 .Card {
   background-color: #333333;
-  border: 1px solid #3C4858;
+  border: 1px solid #3c4858;
   border-radius: 8px;
-  color: #FFE300;
+  color: #ffe300;
   width: 280px;
   cursor: pointer;
 }
@@ -26,12 +26,12 @@
 }
 
 .CardSummary {
-  color: #ABB1BA;
+  color: #abb1ba;
   font-weight: normal;
   display: block;
   display: -webkit-box;
   -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;  
+  text-overflow: ellipsis;
 }

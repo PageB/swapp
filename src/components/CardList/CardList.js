@@ -9,7 +9,7 @@ class cardList extends Component {
    */
   constructor(props) {
     super(props);
-  };
+  }
 
   /**
    * Loop all cards and render each as JSX item.
@@ -21,11 +21,9 @@ class cardList extends Component {
    */
   renderCardItems(CardItem, cards) {
     return cards.map(card => {
-      return (
-        <CardItem key={card.id} card={card}/>
-      );
+      return <CardItem key={card.id} card={card} />;
     });
-  };
+  }
 
   /**
    * Render lifecycle hook
@@ -36,12 +34,8 @@ class cardList extends Component {
   render() {
     const { component: CardItem, cards } = this.props;
 
-    return (
-      <div className={styles.CardList}>
-        {this.renderCardItems(CardItem, cards)}
-      </div>
-    );
+    return <div className={styles.CardList}>{this.renderCardItems(CardItem, cards)}</div>;
   }
-};
+}
 
 export default cardList;

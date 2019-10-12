@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './Input.module.css'
+import styles from './Input.module.css';
 
-const input = (props) => {
+const input = props => {
   return (
     <input
       className={styles.Input}
@@ -11,7 +11,7 @@ const input = (props) => {
       value={props.value}
       onChange={props.onChange}
     />
-  )
-}
+  );
+};
 
 export default input;

@@ -1,8 +1,8 @@
 .Card {
   background-color: #333333;
-  border: 1px solid #3C4858;
+  border: 1px solid #3c4858;
   border-radius: 8px;
-  color: #FFE300;
+  color: #ffe300;
   cursor: pointer;
   display: flex;
   flex-direction: column;

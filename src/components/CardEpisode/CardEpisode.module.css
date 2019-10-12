@@ -1,0 +1,37 @@
+.Card {
+  background-color: #333333;
+  border: 1px solid #3C4858;
+  border-radius: 8px;
+  color: #FFE300;
+  width: 280px;
+  cursor: pointer;
+}
+
+.CardImage {
+  border-radius: 8px 8px 0px 0px;
+  width: 280px;
+}
+
+.CardDetails {
+  color: inherit;
+  background-color: inherit;
+  padding: 0 16px;
+}
+
+.CardTitle {
+  border-radius: 8px 8px 0px 0px;
+  color: inherit;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.CardSummary {
+  color: #ABB1BA;
+  font-weight: normal;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+}

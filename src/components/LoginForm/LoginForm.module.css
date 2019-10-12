@@ -1,0 +1,24 @@
+.Form {
+  width: 480px;
+  margin: 0 auto;
+  padding: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #3C4858;
+  border: 1px solid #333333;
+  border-radius: 8px;
+}
+
+.ErrorMessage {
+  color: #E27164;
+  font-weight: bold;
+  align-self: flex-start;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 8px;
+}
+
+.Form input {
+  margin-bottom: 8px;
+}

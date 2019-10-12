@@ -1,0 +1,30 @@
+.Toolbar {
+  height: 56px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  color: #4BD5EE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 16px;
+}
+
+.Logo img {
+  height: 56px;
+}
+
+.NavMenu a {
+  color: inherit;
+  margin: 0 4px;
+  text-decoration: none;
+}
+
+.NavMenu a:hover {
+  color: #FFE300;
+  margin: 0 4px;
+  text-decoration: none;
+}

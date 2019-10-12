@@ -1,0 +1,28 @@
+.Card {
+  background-color: #333333;
+  border: 1px solid #3C4858;
+  border-radius: 8px;
+  color: #FFE300;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  width: 280px;
+}
+
+.CardImage {
+  border-radius: 8px 8px 0px 0px;
+  width: 60px;
+}
+
+.CardDetails {
+  color: inherit;
+  background-color: inherit;
+  padding: 0 16px;
+}
+
+.CardName {
+  border-radius: 8px 8px 0px 0px;
+  color: inherit;
+  font-weight: bold;
+  font-size: 20px;
+}

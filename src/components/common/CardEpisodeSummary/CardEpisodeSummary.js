@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CardEpisodeSummary.module.css';
 
-const cardEpisodeSummary = (props) => {
+const cardEpisodeSummary = props => {
   return (
     <div className={styles.Card}>
       <div className={styles.CardDetails}>

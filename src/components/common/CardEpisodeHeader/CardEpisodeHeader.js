@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CardEpisodeHeader.module.css';
 
-const cardEpisodeHeader = (props) => {
+const cardEpisodeHeader = props => {
   return (
     <div className={styles.Card}>
       <img className={styles.CardImage} src={props.card.image} alt={props.card.title} />

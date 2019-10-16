@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './NavigationToolbar.module.css';
 import SWLogo from '../../../assets/images/SWLogo.jpg';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const navigationToolbar = () => {
   return (

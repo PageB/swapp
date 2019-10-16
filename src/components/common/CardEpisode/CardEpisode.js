@@ -1,10 +1,15 @@
 import React from 'react';
 import styles from './CardEpisode.module.css';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 
-const cardEpisode = withRouter((props) => {
+const cardEpisode = withRouter(props => {
   return (
-    <div className={styles.Card} onClick={() => { props.history.push(`/episode/${props.card.id}`, props.card)}}>
+    <div
+      className={styles.Card}
+      onClick={() => {
+        props.history.push(`/episode/${props.card.id}`, props.card);
+      }}
+    >
       <img className={styles.CardImage} src={props.card.image} alt={props.card.title} />
       <div className={styles.CardDetails}>
         <p className={styles.CardTitle}>{props.card.title}</p>

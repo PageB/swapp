@@ -12,7 +12,7 @@ class cardList extends Component {
    */
   renderCardItems(CardItem, cards) {
     return cards.map(card => {
-      return <CardItem key={card.id} card={card}/>;
+      return <CardItem key={card.id} card={card} />;
     });
   }
 

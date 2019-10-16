@@ -8,20 +8,20 @@ import styles from './Episode.module.css';
 
 class Episode extends Component {
   state = {
-    episode: this.props.location.state
+    episode: this.props.location.state,
   };
 
   render() {
-    console.log(this.state.episode)
+    console.log(this.state.episode);
     return (
       <div className={styles.Container}>
-        <CardEpisodeHeader card={this.state.episode}/>
-        <CardEpisodeSummary card={this.state.episode}/>
-        <CardList component={CardCharacterLink} cards={this.state.episode.characters}/>
+        <CardEpisodeHeader card={this.state.episode} />
+        <CardEpisodeSummary card={this.state.episode} />
+        <CardList component={CardCharacterLink} cards={this.state.episode.characters} />
         <Button>Load More</Button>
       </div>
     );
-  };
-};
+  }
+}
 
 export default Episode;

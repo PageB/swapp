@@ -3,15 +3,6 @@ import styles from './CardList.module.css';
 
 class cardList extends Component {
   /**
-   * Component constructor.
-   *
-   * @method constructor
-   */
-  constructor(props) {
-    super(props);
-  }
-
-  /**
    * Loop all cards and render each as JSX item.
    *
    * @method renderCardItems
@@ -21,7 +12,7 @@ class cardList extends Component {
    */
   renderCardItems(CardItem, cards) {
     return cards.map(card => {
-      return <CardItem key={card.id} card={card} />;
+      return <CardItem key={card.id} card={card}/>;
     });
   }
 

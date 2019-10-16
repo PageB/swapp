@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './NavigationToolbar.module.css';
-import SWLogo from '../../assets/images/SWLogo.jpg';
+import SWLogo from '../../../assets/images/SWLogo.jpg';
+import { Link } from "react-router-dom";
 
 const navigationToolbar = () => {
   return (
@@ -9,15 +10,9 @@ const navigationToolbar = () => {
         <img src={SWLogo} alt="StarWars App" />
       </div>
       <nav className={styles.NavMenu}>
-        <a className={styles.Link} href="">
-          Episodes
-        </a>
-        <a className={styles.Link} href="">
-          Characters
-        </a>
-        <a className={styles.Link} href="">
-          Logout
-        </a>
+        <Link to="/episodes">Episodes</Link>
+        <Link to="/characters">Characters</Link>
+        {/* <Link>Logout</Link> */}
       </nav>
     </header>
   );

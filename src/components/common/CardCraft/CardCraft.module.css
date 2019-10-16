@@ -3,9 +3,9 @@
   border: 1px solid #3c4858;
   border-radius: 8px;
   color: #ffe300;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
+  margin: 0 16px;
   width: 280px;
 }
 
@@ -28,4 +28,9 @@
   background-color: inherit;
   padding: 0 16px;
   font-size: 14px;
+  border-radius: 8px;
+}
+
+.CardDataLabel {
+  color: #4bd5ee;
 }

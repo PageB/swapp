@@ -1,6 +1,6 @@
 import React from 'react';
 import CardList from '../src/components/CardList/CardList';
-import cardEpisode from '../src/components/CardEpisode/CardEpisode';
+import CardEpisode from '../src/components/CardEpisode/CardEpisode';
 import CardButton from '../src/components/CardButton/CardButton';
 // import { action } from '@storybook/addon-actions';
 
@@ -68,6 +68,6 @@ const characters = [{
   image: "https://www.rollingstone.com/wp-content/uploads/2015/12/rs-218592-6-luke-cd70ba0f-828e-4231-9c8d-f8d6ab92a07b.jpg?resize=1240,1240&w=385"
 }]
 
-export const cardEpisodeList = () => <CardList component={cardEpisode} cards={episodes}/>;
+export const cardEpisodeList = () => <CardList component={CardEpisode} cards={episodes}/>;
 
 export const cardButtonList = () => <CardList component={CardButton} cards={characters}/>;

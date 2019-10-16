@@ -23,9 +23,10 @@ class cardList extends Component {
    * @return {Object}
    */
   render() {
-    const { component: CardItem, cards, theme } = this.props;
+    const { component: CardItem, cards, theme, direction } = this.props;
+    const directionProperty = direction === 'column' ? direction : 'row';
 
-    return <div className={styles.CardList}>{this.renderCardItems(CardItem, cards, theme)}</div>;
+    return <div className={styles.CardList} style={{flexDirection: directionProperty}}>{this.renderCardItems(CardItem, cards, theme)}</div>;
   }
 }
 

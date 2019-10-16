@@ -23,6 +23,7 @@ class Character extends Component {
                   <p className={styles.ListTitle}>Piloted Starships</p>
                   <CardList
                     component={CardCraftLink}
+                    direction={'column'}
                     cards={this.state.character.starships}
                     theme={props}
                   />

@@ -14,7 +14,7 @@
   padding: 0px;
   padding-bottom: 16px;
   text-align: center;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #333333;
 }
 
 .Body {
@@ -35,10 +35,9 @@
   font-weight: bold;
   font-size: 18px;
   margin: 0px;
-  padding: 0px;
-  padding-bottom: 16px;
+  padding: 16px 0px;
   text-align: center;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #333333;
 }
 
 .DarkTheme {

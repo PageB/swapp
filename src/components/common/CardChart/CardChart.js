@@ -48,7 +48,7 @@ class CardChart extends Component {
 
   render() {
     return (
-      <div className={styles.Chart}>
+      <div className={[styles.Chart, styles[this.props.theme]].join(' ')}>
         <p>{this.state.name}</p>
         <Chart options={this.state.options} series={this.state.series} type="radar" height="350" />
       </div>

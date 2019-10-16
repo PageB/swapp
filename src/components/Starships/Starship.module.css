@@ -10,11 +10,17 @@
   font-weight: bold;
   font-size: 24px;
   margin: 0px;
-  margin-bottom: 16px;
   padding: 0px;
-  padding-bottom: 16px;
   text-align: center;
-  border-bottom: 1px solid gray;
+}
+
+.SubHeader {
+  color: #4bd5ee;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
 }
 
 .Body {
@@ -39,4 +45,36 @@
   padding-bottom: 16px;
   text-align: center;
   border-bottom: 1px solid gray;
+}
+
+.DarkTheme {
+  color: #ffe300;
+}
+
+.DarkTheme .Header {
+  color: #ffe300;
+}
+
+.DarkTheme .SubHeader {
+  color: #4bd5ee;
+}
+
+.DarkTheme .ListTitle {
+  color: #4bd5ee;
+}
+
+.LightTheme {
+  color: #4bd5ee;
+}
+
+.LightTheme .Header {
+  color: #4bd5ee;
+}
+
+.LightTheme .SubHeader {
+  color: #333333;
+}
+
+.LightTheme .ListTitle {
+  color: #333333;
 }

@@ -1,6 +1,5 @@
 .Card {
   background-color: #333333;
-  border: 1px solid #3c4858;
   border-radius: 8px;
   color: #ffe300;
   cursor: pointer;
@@ -10,7 +9,7 @@
 }
 
 .CardImage {
-  border-radius: 8px;
+  border-radius: 8px 0 0 8px;
   width: 260px;
 }
 
@@ -39,4 +38,22 @@
   font-weight: bold;
   font-size: 20px;
   color: #4bd5ee;
+}
+
+.DarkTheme {
+  background-color: #333333;
+  color: #ffe300;
+}
+
+.DarkTheme .CardTitle {
+  color: #4bd5ee;
+}
+
+.LightTheme {
+  background-color: #ffffff;
+  color: #4bd5ee;
+}
+
+.LightTheme .CardTitle {
+  color: #333333;
 }

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import CardList from '../common/CardList/CardList';
 import CardEpisode from '../common/CardEpisode/CardEpisode';
+import { ThemeConsumer } from '../../contexts/ThemeContext';
 
 class Episodes extends Component {
   state = {
@@ -338,9 +339,15 @@ class Episodes extends Component {
 
   render() {
     return (
-      <Fragment>
-        <CardList component={CardEpisode} cards={this.state.episodes} />
-      </Fragment>
+      <ThemeConsumer>
+        {props => {
+          return (
+            <Fragment>
+              <CardList component={CardEpisode} cards={this.state.episodes} theme={props} />
+            </Fragment>
+          );
+        }}
+      </ThemeConsumer>
     );
   }
 }

@@ -1,3 +1,15 @@
 .Chart {
   width: 280px;
 }
+
+.DarkTheme {
+  color: #ffe300;
+}
+
+.LightTheme {
+  color: #4bd5ee;
+}
+
+.DarkTheme .apexcharts-canvas {
+  background: yellow;
+}

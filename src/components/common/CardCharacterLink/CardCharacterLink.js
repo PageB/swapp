@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 const cardCharacterLink = withRouter(props => {
   return (
     <div
-      className={styles.Card}
+      className={[styles.Card, styles[props.theme]].join(' ')}
       onClick={() => {
         props.history.push(`/character/${props.card.id}`, props.card);
       }}

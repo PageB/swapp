@@ -1,19 +1,18 @@
 import React from 'react';
+import CardRowData from '../CardRowData/CardRowData';
 import styles from './CardEpisodeSummary.module.css';
 
 const cardEpisodeSummary = props => {
   return (
-    <div className={styles.Card}>
+    <div className={[styles.Card, styles[props.theme]].join(' ')}>
       <div className={styles.CardDetails}>
         <p className={styles.CardSummary}>{props.card.summary}</p>
-        <p>
-          <span className={styles.CardLabel}>Director: </span>
-          <span className={styles.CardLabelValue}>{props.card.director}</span>
-        </p>
-        <p>
-          <span className={styles.CardLabel}>Release date: </span>
-          <span className={styles.CardLabelValue}>{props.card.releaseDate}</span>
-        </p>
+        <CardRowData label="Director: " theme={props.theme}>
+          {props.card.director}
+        </CardRowData>
+        <CardRowData label="Release date: " theme={props.theme}>
+          {props.card.releaseDate}
+        </CardRowData>
       </div>
     </div>
   );

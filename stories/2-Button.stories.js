@@ -8,8 +8,8 @@ export default {
 
 export const text = () => <Button>Login</Button>;
 
-export const darkTheme = () => <Button onClick={action('Login.')} btnTheme='isDark'>Login</Button>;
+export const darkTheme = () => <Button onClick={action('Login.')} theme='DarkTheme'>Login</Button>;
 
-export const lightTheme = () => <Button onClick={action('Login.')} btnTheme='isLight'>Login</Button>;
+export const lightTheme = () => <Button onClick={action('Login.')} theme='LightTheme'>Login</Button>;
 
 export const clickAction = () => <Button onClick={action('Login.')}>Login</Button>;

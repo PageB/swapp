@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import CardList from '../common/CardList/CardList';
 import CardCharacterLink from '../common/CardCharacterLink/CardCharacterLink';
+import { ThemeConsumer } from '../../contexts/ThemeContext';
 
 class Characters extends Component {
   state = {
@@ -17,6 +18,7 @@ class Characters extends Component {
           {
             id: 100,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -27,6 +29,7 @@ class Characters extends Component {
           {
             id: 200,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -37,6 +40,7 @@ class Characters extends Component {
           {
             id: 300,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -59,6 +63,7 @@ class Characters extends Component {
           {
             id: 100,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -69,6 +74,7 @@ class Characters extends Component {
           {
             id: 200,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -79,6 +85,7 @@ class Characters extends Component {
           {
             id: 300,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -101,6 +108,7 @@ class Characters extends Component {
           {
             id: 100,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -111,6 +119,7 @@ class Characters extends Component {
           {
             id: 200,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -121,6 +130,7 @@ class Characters extends Component {
           {
             id: 300,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -143,6 +153,7 @@ class Characters extends Component {
           {
             id: 100,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -153,6 +164,7 @@ class Characters extends Component {
           {
             id: 200,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -163,6 +175,7 @@ class Characters extends Component {
           {
             id: 300,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -185,6 +198,7 @@ class Characters extends Component {
           {
             id: 100,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -195,6 +209,7 @@ class Characters extends Component {
           {
             id: 200,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -205,6 +220,7 @@ class Characters extends Component {
           {
             id: 300,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -227,6 +243,7 @@ class Characters extends Component {
           {
             id: 100,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -237,6 +254,7 @@ class Characters extends Component {
           {
             id: 200,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -247,6 +265,7 @@ class Characters extends Component {
           {
             id: 300,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -269,6 +288,7 @@ class Characters extends Component {
           {
             id: 100,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -279,6 +299,7 @@ class Characters extends Component {
           {
             id: 200,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -289,6 +310,7 @@ class Characters extends Component {
           {
             id: 300,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -311,6 +333,7 @@ class Characters extends Component {
           {
             id: 100,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -321,6 +344,7 @@ class Characters extends Component {
           {
             id: 200,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -331,6 +355,7 @@ class Characters extends Component {
           {
             id: 300,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -353,6 +378,7 @@ class Characters extends Component {
           {
             id: 100,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -363,6 +389,7 @@ class Characters extends Component {
           {
             id: 200,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -373,6 +400,7 @@ class Characters extends Component {
           {
             id: 300,
             name: 'Jedi Starfighter',
+            shipClass: 'Delta-7 Aethersprite-class Starfighter',
             image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
             class: 'starfighter',
             cost: '180000 credits',
@@ -387,9 +415,15 @@ class Characters extends Component {
 
   render() {
     return (
-      <Fragment>
-        <CardList component={CardCharacterLink} cards={this.state.characters} />
-      </Fragment>
+      <ThemeConsumer>
+        {props => {
+          return (
+            <Fragment>
+              <CardList component={CardCharacterLink} cards={this.state.characters} theme={props}/>
+            </Fragment>
+          )
+        }}
+      </ThemeConsumer>
     );
   }
 }

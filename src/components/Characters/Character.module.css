@@ -6,7 +6,7 @@
 }
 
 .Header {
-  color: #4bd5ee;
+  color: inherit;
   font-weight: bold;
   font-size: 24px;
   margin: 0px;
@@ -31,7 +31,7 @@
 }
 
 .ListTitle {
-  color: #4bd5ee;
+  color: inherit;
   font-weight: bold;
   font-size: 18px;
   margin: 0px;
@@ -39,4 +39,12 @@
   padding-bottom: 16px;
   text-align: center;
   border-bottom: 1px solid gray;
+}
+
+.DarkTheme {
+  color: #ffe300;
+}
+
+.LightTheme {
+  color: #4bd5ee;
 }

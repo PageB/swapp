@@ -4,7 +4,7 @@ import CardRowData from '../CardRowData/CardRowData';
 
 const cardCharacter = props => {
   return (
-    <div className={styles.Card}>
+    <div className={[styles.Card, styles[props.theme]].join(' ')}>
       <p className={styles.CardName}>{props.card.name}</p>
       <img className={styles.CardImage} src={props.card.image} alt={props.card.name} />
       <div className={styles.CardDetails}>

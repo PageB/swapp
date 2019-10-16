@@ -15,6 +15,7 @@
 
 .Logo img {
   height: 56px;
+  cursor: pointer;
 }
 
 .NavMenu a {
@@ -27,4 +28,13 @@
   color: #ffe300;
   margin: 0 4px;
   text-decoration: none;
+}
+
+
+.DarkTheme {
+  background-color: #333333;
+}
+
+.LightTheme {
+  background-color: #000;
 }

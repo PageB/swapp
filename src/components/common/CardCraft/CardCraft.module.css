@@ -1,6 +1,5 @@
 .Card {
   background-color: #333333;
-  border: 1px solid #3c4858;
   border-radius: 8px;
   color: #ffe300;
   display: flex;
@@ -32,5 +31,15 @@
 }
 
 .CardDataLabel {
+  color: #4bd5ee;
+}
+
+.DarkTheme {
+  background-color: #333333;
+  color: #ffe300;
+}
+
+.LightTheme {
+  background-color: #ffffff;
   color: #4bd5ee;
 }

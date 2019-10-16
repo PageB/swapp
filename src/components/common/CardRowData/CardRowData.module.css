@@ -1,3 +1,15 @@
-.CardDataLabel {
+.DarkTheme .CardDataLabel {
+  color: #4bd5ee;
+}
+
+.DarkTheme .CardDataValue {
+  color: #ffe300;
+}
+
+.LightTheme .CardDataLabel {
+  color: #4E5B6E;
+}
+
+.LightTheme .CardDataValue {
   color: #4bd5ee;
 }

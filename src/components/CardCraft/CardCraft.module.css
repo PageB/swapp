@@ -5,25 +5,31 @@
   color: #ffe300;
   cursor: pointer;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 280px;
-  margin: 8px 16px;
-}
-
-.CardImage {
-  border-radius: 8px;
-  width: 60px;
-}
-
-.CardDetails {
-  color: inherit;
-  background-color: inherit;
-  padding: 0 16px;
 }
 
 .CardName {
   border-radius: 8px 8px 0px 0px;
   color: inherit;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.CardImage {
+  border-radius: 8px;
+  padding: 0 16px;
+  width: 248px;
+}
+
+.CardDetails {
+  color: inherit;
+  background-color: inherit;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.CardDataLabel {
+  color: #4bd5ee;
 }

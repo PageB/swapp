@@ -1,16 +1,16 @@
 import React from 'react';
-import styles from './CardEpisode.module.css';
+import styles from './CardEpisodeHeader.module.css';
 
-const cardEpisode = props => {
+const cardEpisodeHeader = (props) => {
   return (
-    <div className={styles.Card} onClick={() => props.navTo(props.card.id)}>
+    <div className={styles.Card}>
       <img className={styles.CardImage} src={props.card.image} alt={props.card.title} />
       <div className={styles.CardDetails}>
+        <p className={styles.CardEpiside}>{props.card.episode}</p>
         <p className={styles.CardTitle}>{props.card.title}</p>
-        <p className={styles.CardSummary}>{props.card.summary}</p>
       </div>
     </div>
   );
 };
 
-export default cardEpisode;
+export default cardEpisodeHeader;

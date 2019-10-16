@@ -6,23 +6,35 @@
   cursor: pointer;
   display: flex;
   flex-direction: row;
-  width: 280px;
-}
-
-.CardImage {
-  border-radius: 8px 8px 0px 0px;
-  width: 60px;
+  margin: 16px;
 }
 
 .CardDetails {
   color: inherit;
   background-color: inherit;
   padding: 0 16px;
+  border-radius: 8px;
 }
 
-.CardName {
+.CardEpiside {
   border-radius: 8px 8px 0px 0px;
   color: inherit;
   font-weight: bold;
   font-size: 20px;
+}
+
+.CardTitle {
+  border-radius: 8px 8px 0px 0px;
+  color: inherit;
+  font-weight: bold;
+  font-size: 20px;
+  color: #4bd5ee;
+}
+
+.CardLabel {
+  color: #4bd5ee;
+}
+
+.CardLabelValue {
+  color: #ffe300;
 }

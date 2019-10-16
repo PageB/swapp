@@ -3,16 +3,13 @@
   border: 1px solid #3c4858;
   border-radius: 8px;
   color: #ffe300;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
   width: 280px;
-  margin: 8px 16px;
+  cursor: pointer;
 }
 
 .CardImage {
   border-radius: 8px 8px 0px 0px;
-  width: 60px;
+  width: 280px;
 }
 
 .CardDetails {
@@ -21,9 +18,20 @@
   padding: 0 16px;
 }
 
-.CardName {
+.CardTitle {
   border-radius: 8px 8px 0px 0px;
   color: inherit;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
+}
+
+.CardSummary {
+  color: #abb1ba;
+  font-weight: normal;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

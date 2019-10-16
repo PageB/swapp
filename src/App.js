@@ -1,6 +1,6 @@
 import React, { Component, Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { ThemeProvider } from './contexts/ThemeContext'
+import { ThemeProvider } from './contexts/ThemeContext';
 import { ThemeConsumer } from './contexts/ThemeContext';
 import Nav from './components/common/NavigationToolbar/NavigationToolbar';
 import Episode from './components/Episodes/Episode';
@@ -12,16 +12,16 @@ import './App.css';
 
 class App extends Component {
   state = {
-    theme: "DarkTheme"
-  }
+    theme: 'DarkTheme',
+  };
 
   componentDidMount() {
     document.body.classList.add('DarkTheme');
   }
 
   componentWillUnmount() {
-    document.body.classList.remove('DarkTheme')
-    document.body.classList.remove('LightTheme')
+    document.body.classList.remove('DarkTheme');
+    document.body.classList.remove('LightTheme');
   }
 
   /**
@@ -34,16 +34,16 @@ class App extends Component {
   themeChangeHandler = () => {
     const currentTheme = this.state.theme;
 
-    if (currentTheme === "DarkTheme") {
+    if (currentTheme === 'DarkTheme') {
       document.body.classList.add('LightTheme');
       document.body.classList.remove('DarkTheme');
-      this.setState({theme: "LightTheme"});
+      this.setState({ theme: 'LightTheme' });
     } else {
       document.body.classList.add('DarkTheme');
       document.body.classList.remove('LightTheme');
-      this.setState({theme: "DarkTheme"});
+      this.setState({ theme: 'DarkTheme' });
     }
-  }
+  };
 
   /**
    * Render lifecycle hook
@@ -58,9 +58,8 @@ class App extends Component {
           <Fragment>
             <ThemeConsumer>
               {props => {
-                return (
-                  <Nav themeChanged={this.themeChangeHandler} theme={props}/>
-                )}}
+                return <Nav themeChanged={this.themeChangeHandler} theme={props} />;
+              }}
             </ThemeConsumer>
             <Switch>
               {/* <Route path="/" component={Login} /> */}
@@ -73,7 +72,7 @@ class App extends Component {
           </Fragment>
         </ThemeProvider>
       </Router>
-    )
+    );
   }
 }
 

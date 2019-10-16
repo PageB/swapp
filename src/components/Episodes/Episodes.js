@@ -343,9 +343,9 @@ class Episodes extends Component {
         {props => {
           return (
             <Fragment>
-              <CardList component={CardEpisode} cards={this.state.episodes} theme={props}/>
+              <CardList component={CardEpisode} cards={this.state.episodes} theme={props} />
             </Fragment>
-          )
+          );
         }}
       </ThemeConsumer>
     );

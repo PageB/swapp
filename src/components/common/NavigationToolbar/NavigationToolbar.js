@@ -3,7 +3,7 @@ import styles from './NavigationToolbar.module.css';
 import SWLogo from '../../../assets/images/SWLogo.png';
 import { Link } from 'react-router-dom';
 
-const navigationToolbar = (props) => {
+const navigationToolbar = props => {
   return (
     <header className={[styles.Toolbar, styles[props.theme]].join(' ')}>
       <div className={styles.Logo} onClick={props.themeChanged}>

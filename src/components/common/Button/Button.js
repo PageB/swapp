@@ -15,17 +15,6 @@ const Button = props => {
 
 export default Button;
 
-
-
-
-
-
-
-
-
-
-
-
 // import React, { useContext } from 'react';
 // import styles from './Button.module.css';
 // import ThemeContext from '../../../contexts/ThemeContext';

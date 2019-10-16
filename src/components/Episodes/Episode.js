@@ -18,12 +18,16 @@ class Episode extends Component {
         {props => {
           return (
             <div className={styles.Container}>
-              <CardEpisodeHeader card={this.state.episode} theme={props}/>
-              <CardEpisodeSummary card={this.state.episode} theme={props}/>
-              <CardList component={CardCharacterLink} cards={this.state.episode.characters} theme={props}/>
+              <CardEpisodeHeader card={this.state.episode} theme={props} />
+              <CardEpisodeSummary card={this.state.episode} theme={props} />
+              <CardList
+                component={CardCharacterLink}
+                cards={this.state.episode.characters}
+                theme={props}
+              />
               <Button theme={props}>Load More</Button>
             </div>
-          )
+          );
         }}
       </ThemeConsumer>
     );

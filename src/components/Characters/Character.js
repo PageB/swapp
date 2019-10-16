@@ -18,14 +18,18 @@ class Character extends Component {
             <div className={[styles.Container, styles[props]].join(' ')}>
               <p className={styles.Header}>{this.state.character.name}</p>
               <div className={styles.Body}>
-                <CardCharacter card={this.state.character} theme={props}/>
+                <CardCharacter card={this.state.character} theme={props} />
                 <div className={styles.ListContainer}>
                   <p className={styles.ListTitle}>Piloted Starships</p>
-                  <CardList component={CardCraftLink} cards={this.state.character.starships} theme={props}/>
+                  <CardList
+                    component={CardCraftLink}
+                    cards={this.state.character.starships}
+                    theme={props}
+                  />
                 </div>
               </div>
             </div>
-          )
+          );
         }}
       </ThemeConsumer>
     );

@@ -419,9 +419,9 @@ class Characters extends Component {
         {props => {
           return (
             <Fragment>
-              <CardList component={CardCharacterLink} cards={this.state.characters} theme={props}/>
+              <CardList component={CardCharacterLink} cards={this.state.characters} theme={props} />
             </Fragment>
-          )
+          );
         }}
       </ThemeConsumer>
     );

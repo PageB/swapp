@@ -24,7 +24,7 @@ class LoginForm extends Component {
     );
 
     return (
-      <form className={styles.Form} onSubmit={this.handleSubmit}>
+      <form className={[styles.Form, styles[this.props.theme]].join(' ')} onSubmit={this.handleSubmit}>
         {LoginErrorMessage}
         <Input
           type="type"
@@ -40,7 +40,7 @@ class LoginForm extends Component {
           value={password}
           onChange={this.handleInputChange}
         />
-        <Button type="submit" btnTheme="isLight">
+        <Button type="submit" theme={this.props.theme}>
           Login
         </Button>
       </form>

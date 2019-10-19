@@ -16,10 +16,12 @@ class App extends Component {
     theme: 'DarkTheme',
   };
 
+  // TODO: Refactor with React hooks
   componentDidMount() {
     document.body.classList.add('DarkTheme');
   }
 
+  // TODO: Refactor with React hooks
   componentWillUnmount() {
     document.body.classList.remove('DarkTheme');
     document.body.classList.remove('LightTheme');

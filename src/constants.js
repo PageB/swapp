@@ -1,3 +1,1 @@
-export const AUTH = {
-
-}
+export const AUTH = {};

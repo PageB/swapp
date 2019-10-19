@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from './CardCharacter.module.css';
 import CardRowData from '../CardRowData/CardRowData';
+
+import styles from './CardCharacter.module.scss';
 
 const cardCharacter = props => {
   return (

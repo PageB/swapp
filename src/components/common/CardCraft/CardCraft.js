@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from './CardCraft.module.css';
 import CardRowData from '../CardRowData/CardRowData';
+
+import styles from './CardCraft.module.scss';
 
 const cardCraft = props => {
   return (

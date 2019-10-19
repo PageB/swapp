@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import styles from './LoginForm.module.css';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
 import { AUTH } from '../../../constants';
+
+import styles from './LoginForm.module.scss';
 
 class LoginForm extends Component {
   state = { email: '', password: '', errorMessage: 'Invalid login.' };
@@ -18,31 +19,32 @@ class LoginForm extends Component {
     const options = {
       method: 'post',
       headers: {
-        'Authorization': 'Bearer eyJhbGciOiJIUzI123iIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTZmYTFl YTQxYTA4MGY4YjIxMjMwMiIsImVtYWlsIjoiZGVtb0BzdDYuaW8iL CJyb2xlIjoiQURNSU4iL1KHHASDHXQiOjE1NzAxNzYwMjksImV4c CI6MTU3MDE3NzgyOX0.1vYZfspRxVA9wV_FbHL5N0YoVM8ZVQ z9y09LfAgjwSc'
+        Authorization:
+          'Bearer eyJhbGciOiJIUzI123iIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTZmYTFl YTQxYTA4MGY4YjIxMjMwMiIsImVtYWlsIjoiZGVtb0BzdDYuaW8iL CJyb2xlIjoiQURNSU4iL1KHHASDHXQiOjE1NzAxNzYwMjksImV4c CI6MTU3MDE3NzgyOX0.1vYZfspRxVA9wV_FbHL5N0YoVM8ZVQ z9y09LfAgjwSc',
       },
-      body: `email=${this.state.email}&password=${this.state.password}`
-    }
+      body: `email=${this.state.email}&password=${this.state.password}`,
+    };
 
     fetch(url, options)
-    .then(response => {
-      debugger;
-      if (!response.ok) {
-        if (response.status === 404) {
-          alert('Email not found, please retry')
+      .then(response => {
+        debugger;
+        if (!response.ok) {
+          if (response.status === 404) {
+            alert('Email not found, please retry');
+          }
+          if (response.status === 401) {
+            alert('Email and password do not match, please retry');
+          }
         }
-        if (response.status === 401) {
-          alert('Email and password do not match, please retry')
+        return response;
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          document.cookie = 'token=' + data.token;
+          // navigate('/private-area')
         }
-      }
-      return response
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        document.cookie = 'token=' + data.token
-        // navigate('/private-area')  
-      }
-    })
+      });
   };
 
   handleeUserData = token => {
@@ -52,7 +54,7 @@ class LoginForm extends Component {
     } else {
       localStorage.setItem(AUTH.AUTH_TOKEN, token);
     }
-  }
+  };
 
   render() {
     const { email, password, errorMessage } = this.state;

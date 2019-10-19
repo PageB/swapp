@@ -1,6 +1,7 @@
 import React from 'react';
 import CardRowData from '../CardRowData/CardRowData';
-import styles from './CardEpisodeSummary.module.css';
+
+import styles from './CardEpisodeSummary.module.scss';
 
 const cardEpisodeSummary = props => {
   return (

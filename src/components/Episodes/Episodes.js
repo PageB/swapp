@@ -6,7 +6,7 @@ import { fetchStarWarsEpisodes } from '../../data';
 
 class Episodes extends Component {
   state = {
-    episodes: []
+    episodes: [],
   };
 
   async componentDidMount() {

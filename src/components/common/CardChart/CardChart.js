@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Chart from 'react-apexcharts';
-import styles from './CardChart.module.css';
+
+import styles from './CardChart.module.scss';
 
 class CardChart extends Component {
   constructor(props) {

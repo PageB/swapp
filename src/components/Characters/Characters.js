@@ -6,7 +6,7 @@ import { fetchStarWarsCharacters } from '../../data';
 
 class Characters extends Component {
   state = {
-    characters: []
+    characters: [],
   };
 
   async componentDidMount() {

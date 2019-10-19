@@ -1,3 +1,5 @@
+@import '../../colors.scss';
+
 .Container {
   display: flex;
   flex-direction: column;
@@ -6,7 +8,7 @@
 }
 
 .Header {
-  color: #4bd5ee;
+  color: $crayola;
   font-weight: bold;
   font-size: 24px;
   margin: 0px;
@@ -15,7 +17,7 @@
 }
 
 .SubHeader {
-  color: #4bd5ee;
+  color: $crayola;
   font-weight: bold;
   font-size: 24px;
   margin: 0px;
@@ -29,7 +31,7 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  border-top: 1px solid #333333;
+  border-top: 1px solid $dark-charcoal;
   padding: 16px 0;
 }
 
@@ -40,44 +42,44 @@
 }
 
 .ListTitle {
-  color: #4bd5ee;
+  color: $crayola;
   font-weight: bold;
   font-size: 18px;
   margin: 0px;
   padding: 0px;
   padding: 16px 0px;
   text-align: center;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid $dark-charcoal;
 }
 
 .DarkTheme {
-  color: #ffe300;
+  color: $vivid-yellow;
 }
 
 .DarkTheme .Header {
-  color: #ffe300;
+  color: $vivid-yellow;
 }
 
 .DarkTheme .SubHeader {
-  color: #4bd5ee;
+  color: $crayola;
 }
 
 .DarkTheme .ListTitle {
-  color: #4bd5ee;
+  color: $crayola;
 }
 
 .LightTheme {
-  color: #4bd5ee;
+  color: $crayola;
 }
 
 .LightTheme .Header {
-  color: #4bd5ee;
+  color: $crayola;
 }
 
 .LightTheme .SubHeader {
-  color: #333333;
+  color: $dark-charcoal;
 }
 
 .LightTheme .ListTitle {
-  color: #333333;
+  color: $dark-charcoal;
 }

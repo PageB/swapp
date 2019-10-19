@@ -1,11 +1,13 @@
+@import '../../../colors.scss';
+
 .Toolbar {
   height: 56px;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #000;
-  color: #4bd5ee;
+  background-color: $black;
+  color: $crayola;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,15 +27,15 @@
 }
 
 .NavMenu a:hover {
-  color: #ffe300;
+  color: $vivid-yellow;
   margin: 0 4px;
   text-decoration: none;
 }
 
 .DarkTheme {
-  background-color: #333333;
+  background-color: $dark-charcoal;
 }
 
 .LightTheme {
-  background-color: #000;
+  background-color: $black;
 }

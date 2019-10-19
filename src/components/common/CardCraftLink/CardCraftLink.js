@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from './CardCraftLink.module.css';
 import { withRouter } from 'react-router-dom';
+
+import styles from './CardCraftLink.module.scss';
 
 const cardCraftLink = withRouter(props => {
   return (

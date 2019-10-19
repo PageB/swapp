@@ -9,7 +9,6 @@ import Episodes from './components/Episodes/Episodes';
 import Character from './components/Characters/Character';
 import Characters from './components/Characters/Characters';
 import Starship from './components/Starships/Starship';
-import './App.css';
 
 class App extends Component {
   state = {

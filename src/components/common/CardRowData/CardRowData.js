@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './CardRowData.module.css';
+
+import styles from './CardRowData.module.scss';
 
 const cardRowData = props => {
   return (

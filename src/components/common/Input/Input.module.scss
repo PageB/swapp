@@ -1,3 +1,5 @@
+@import '../../../colors.scss';
+
 .Input {
   border-radius: 4px;
   width: 100%;
@@ -9,6 +11,6 @@
 
 .Input:focus {
   outline-width: 2px;
-  outline-color: #ffe300;
+  outline-color: $vivid-yellow;
   outline-style: inset;
 }

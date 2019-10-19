@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styles from './CardList.module.css';
+
+import styles from './CardList.module.scss';
 
 class cardList extends Component {
   /**

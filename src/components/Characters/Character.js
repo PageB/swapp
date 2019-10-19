@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import CardList from '../common/CardList/CardList';
 import CardCraftLink from '../common/CardCraftLink/CardCraftLink';
 import CardCharacter from '../common/CardCharacter/CardCharacter';
-import styles from './Character.module.css';
 import { ThemeConsumer } from '../../contexts/ThemeContext';
+
+import styles from './Character.module.scss';
 
 class Character extends Component {
   state = {

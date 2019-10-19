@@ -1,3 +1,5 @@
+@import '../../colors.scss';
+
 .Container {
   display: flex;
   flex-direction: column;
@@ -14,7 +16,7 @@
   padding: 0px;
   padding-bottom: 16px;
   text-align: center;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid $dark-charcoal;
 }
 
 .Body {
@@ -37,13 +39,13 @@
   margin: 0px;
   padding: 16px 0px;
   text-align: center;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid $dark-charcoal;
 }
 
 .DarkTheme {
-  color: #ffe300;
+  color: $vivid-yellow;
 }
 
 .LightTheme {
-  color: #4bd5ee;
+  color: $crayola;
 }

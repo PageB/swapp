@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from './CardEpisode.module.css';
 import { withRouter } from 'react-router-dom';
+
+import styles from './CardEpisode.module.scss';
 
 const cardEpisode = withRouter(props => {
   return (

@@ -4,8 +4,9 @@ import CardEpisodeSummary from '../common/CardEpisodeSummary/CardEpisodeSummary'
 import CardList from '../common/CardList/CardList';
 import CardCharacterLink from '../common/CardCharacterLink/CardCharacterLink';
 import Button from '../common/Button/Button';
-import styles from './Episode.module.css';
 import { ThemeConsumer } from '../../contexts/ThemeContext';
+
+import styles from './Episode.module.scss';
 
 class Episode extends Component {
   state = {

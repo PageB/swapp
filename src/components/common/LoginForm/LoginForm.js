@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import styles from './LoginForm.module.css';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
 import { AUTH } from '../../../constants';
+
+import styles from './LoginForm.module.scss';
 
 class LoginForm extends Component {
   state = { email: '', password: '', errorMessage: 'Invalid login.' };

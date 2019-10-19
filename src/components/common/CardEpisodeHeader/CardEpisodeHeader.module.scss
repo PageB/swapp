@@ -1,7 +1,9 @@
+@import '../../../colors.scss';
+
 .Card {
-  background-color: #333333;
+  background-color: $dark-charcoal;
   border-radius: 8px;
-  color: #ffe300;
+  color: $vivid-yellow;
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -40,23 +42,23 @@
   color: inherit;
   font-weight: bold;
   font-size: 20px;
-  color: #4bd5ee;
+  color: $crayola;
 }
 
 .DarkTheme {
-  background-color: #333333;
-  color: #ffe300;
+  background-color: $dark-charcoal;
+  color: $vivid-yellow;
 }
 
 .DarkTheme .CardTitle {
-  color: #4bd5ee;
+  color: $crayola;
 }
 
 .LightTheme {
-  background-color: #ffffff;
-  color: #4bd5ee;
+  background-color: $white;
+  color: $crayola;
 }
 
 .LightTheme .CardTitle {
-  color: #333333;
+  color: $dark-charcoal;
 }

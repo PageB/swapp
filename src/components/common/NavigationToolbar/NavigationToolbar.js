@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from './NavigationToolbar.module.css';
 import SWLogo from '../../../assets/images/SWLogo.png';
 import { Link } from 'react-router-dom';
+
+import styles from './NavigationToolbar.module.scss';
 
 const navigationToolbar = props => {
   return (

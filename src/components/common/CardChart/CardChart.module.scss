@@ -1,13 +1,15 @@
+@import '../../../colors.scss';
+
 .Chart {
   width: 280px;
 }
 
 .DarkTheme {
-  color: #ffe300;
+  color: $vivid-yellow;
 }
 
 .LightTheme {
-  color: #4bd5ee;
+  color: $crayola;
 }
 
 .DarkTheme .apexcharts-canvas {

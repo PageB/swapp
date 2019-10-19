@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import CardCraft from '../common/CardCraft/CardCraft';
 import CardChart from '../common/CardChart/CardChart';
-import styles from './Starship.module.css';
 import { ThemeConsumer } from '../../contexts/ThemeContext';
+
+import styles from './Starship.module.scss';
 
 class Character extends Component {
   state = {

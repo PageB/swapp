@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './CardEpisodeHeader.module.css';
+
+import styles from './CardEpisodeHeader.module.scss';
 
 const cardEpisodeHeader = props => {
   return (

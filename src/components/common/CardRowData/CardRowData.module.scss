@@ -1,15 +1,17 @@
+@import '../../../colors.scss';
+
 .DarkTheme .CardDataLabel {
-  color: #4bd5ee;
+  color: $crayola;
 }
 
 .DarkTheme .CardDataValue {
-  color: #ffe300;
+  color: $vivid-yellow;
 }
 
 .LightTheme .CardDataLabel {
-  color: #4e5b6e;
+  color: $black-coral;
 }
 
 .LightTheme .CardDataValue {
-  color: #4bd5ee;
+  color: $crayola;
 }

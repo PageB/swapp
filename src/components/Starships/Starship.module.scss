@@ -32,7 +32,8 @@
   justify-content: center;
   margin: 0 auto;
 
-  &__Header, &__SubHeader {
+  &__Header,
+  &__SubHeader {
     color: $crayola;
     font-weight: bold;
     font-size: 24px;

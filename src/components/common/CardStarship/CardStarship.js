@@ -7,7 +7,11 @@ const cardStarship = props => {
   return (
     <div className={[styles.StarshipCard, styles[props.theme]].join(' ')}>
       <p className={styles.StarshipCard__Name}>{props.starship.name}</p>
-      <img className={styles.StarshipCard__Image} src={props.starship.image} alt={props.starship.name} />
+      <img
+        className={styles.StarshipCard__Image}
+        src={props.starship.image}
+        alt={props.starship.name}
+      />
       <div className={styles.StarshipCard__Details}>
         <CardRowData label="Class: " theme={props.theme}>
           {props.starship.starshipClass}

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './Button.module.scss';
 
@@ -14,24 +15,15 @@ const Button = props => {
   );
 };
 
+Button.propTypes = {
+  onClick: PropTypes.func,
+  children: PropTypes.string,
+  type: PropTypes.string,
+  type: PropTypes.oneOf(['button', 'reset', 'submit']),
+};
+
+Button.defaultProps = {
+  type: 'button',
+};
+
 export default Button;
-
-// import React, { useContext } from 'react';
-// import styles from './Button.module.css';
-// import ThemeContext from '../../../contexts/ThemeContext';
-
-// const Button = props => {
-//   const theme = useContext(ThemeContext);
-
-//   return (
-//     <button
-//       className={[styles.Button, styles[theme]].join(' ')}
-//       type={props.type}
-//       onClick={props.onClick}
-//     >
-//       <span>{props.children}</span>
-//     </button>
-//   );
-// };
-
-// export default Button;

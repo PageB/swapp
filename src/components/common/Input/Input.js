@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './Input.module.scss';
 
-const input = props => {
+const Input = props => {
   return (
     <input
       className={styles.Input}
@@ -15,4 +16,17 @@ const input = props => {
   );
 };
 
-export default input;
+Input.propTypes = {
+  type: PropTypes.string,
+  type: PropTypes.oneOf(['text', 'number', 'email', 'password']),
+  placeholder: PropTypes.string,
+  name: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  onChange: PropTypes.func,
+};
+
+Input.defaultProps = {
+  type: 'text',
+};
+
+export default Input;

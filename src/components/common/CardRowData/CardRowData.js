@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './CardRowData.module.scss';
 
@@ -9,6 +10,11 @@ const cardRowData = props => {
       <span className={styles.CardDataValue}>{props.children}</span>
     </p>
   );
+};
+
+cardRowData.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.symbol]),
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.symbol]),
 };
 
 export default cardRowData;

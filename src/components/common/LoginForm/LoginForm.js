@@ -24,7 +24,10 @@ class LoginForm extends Component {
     );
 
     return (
-      <form className={[styles.Form, styles[this.props.theme]].join(' ')} onSubmit={this.handleSubmit}>
+      <form
+        className={[styles.Form, styles[this.props.theme]].join(' ')}
+        onSubmit={this.handleSubmit}
+      >
         {LoginErrorMessage}
         <Input
           type="type"

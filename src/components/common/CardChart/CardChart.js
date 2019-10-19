@@ -6,7 +6,7 @@ import styles from './CardChart.module.scss';
 class CardChart extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       options: {
         plotOptions: {

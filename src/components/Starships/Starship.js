@@ -7,7 +7,7 @@ import styles from './Starship.module.scss';
 
 class Character extends Component {
   state = {
-    starships: this.props.location.state,
+    starship: this.props.location.state,
   };
 
   render() {
@@ -16,13 +16,13 @@ class Character extends Component {
         {props => {
           return (
             <div className={[styles.Container, styles[props]].join(' ')}>
-              <p className={styles.Header}>{this.state.starships.name}</p>
-              <p className={styles.SubHeader}>{this.state.starships.shipClass}</p>
+              <p className={styles.Header}>{this.state.starship.name}</p>
+              <p className={styles.SubHeader}>{this.state.starship.shipClass}</p>
               <div className={styles.Body}>
-                <CardCraft card={this.state.starships} theme={props} />
+                <CardCraft starship={this.state.starship} theme={props} />
                 <div className={styles.ListContainer}>
                   <p className={styles.ListTitle}>Compared to Starship Class Max</p>
-                  <CardChart card={this.state.starships} theme={props} />
+                  <CardChart starship={this.state.starship} theme={props} />
                 </div>
               </div>
             </div>

@@ -14,7 +14,7 @@ const cardEpisode = withRouter(props => {
       <img className={styles.CardImage} src={props.card.image} alt={props.card.title} />
       <div className={styles.CardDetails}>
         <p className={styles.CardTitle}>{props.card.title}</p>
-        <p className={styles.CardSummary}>{props.card.summary}</p>
+        <p className={styles.CardSummary}>{props.card.openingCrawl}</p>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ class Episode extends Component {
               <CardEpisodeSummary card={this.state.episode} theme={props} />
               <CardList
                 component={CardCharacterLink}
-                cards={this.state.episode.characters}
+                cards={this.state.episode.people}
                 theme={props}
               />
               <Button theme={props}>Load More</Button>

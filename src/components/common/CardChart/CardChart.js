@@ -6,6 +6,7 @@ import styles from './CardChart.module.scss';
 class CardChart extends Component {
   constructor(props) {
     super(props);
+    console.log(props);
 
     this.state = {
       options: {
@@ -22,7 +23,7 @@ class CardChart extends Component {
         },
         yaxis: {
           show: false,
-          max: 500,
+          max: 3000,
         },
         dataLabels: {
           style: {
@@ -36,12 +37,18 @@ class CardChart extends Component {
           },
         },
         colors: ['#FFE300'],
-        labels: ['Class', 'Cost', 'Crew', 'Speed', 'Rating'],
+        labels: ['ML', 'Cost', 'Crew', 'Speed', 'Rating'],
       },
       series: [
         {
           name: props.name,
-          data: [80, 50, 30, 40, 100],
+          data: [
+            props.starship.maxMLPerHour,
+            props.starship.cost,
+            props.starship.crew,
+            props.starship.maxAtmosphericSpeed,
+            props.starship.hyperdriveRating,
+          ],
         },
       ],
     };

@@ -1,8 +1,9 @@
-import React, { Component, Fragment, useEffect } from 'react';
+import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { ThemeConsumer } from './contexts/ThemeContext';
 import Nav from './components/common/NavigationToolbar/NavigationToolbar';
+import Login from './components/Login/Login';
 import Episode from './components/Episodes/Episode';
 import Episodes from './components/Episodes/Episodes';
 import Character from './components/Characters/Character';
@@ -15,10 +16,12 @@ class App extends Component {
     theme: 'DarkTheme',
   };
 
+  // TODO: Refactor with React hooks
   componentDidMount() {
     document.body.classList.add('DarkTheme');
   }
 
+  // TODO: Refactor with React hooks
   componentWillUnmount() {
     document.body.classList.remove('DarkTheme');
     document.body.classList.remove('LightTheme');

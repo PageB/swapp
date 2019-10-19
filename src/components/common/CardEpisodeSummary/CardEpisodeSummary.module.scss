@@ -1,29 +1,5 @@
 @import '../../../colors.scss';
 
-.Card {
-  background-color: $dark-charcoal;
-  border-radius: 8px;
-  color: $vivid-yellow;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  margin: 16px;
-}
-
-.CardDetails {
-  color: inherit;
-  background-color: inherit;
-  padding: 0 16px;
-  border-radius: 8px;
-}
-
-.CardEpiside {
-  border-radius: 8px 8px 0px 0px;
-  color: inherit;
-  font-weight: bold;
-  font-size: 20px;
-}
-
 .DarkTheme {
   background-color: $dark-charcoal;
   color: $cadet-blue;
@@ -32,4 +8,25 @@
 .LightTheme {
   background: $white;
   color: $black-coral;
+}
+
+.Card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin: 16px;
+  border-radius: 8px;
+
+  &__Details {
+    color: inherit;
+    background-color: inherit;
+    padding: 0 16px;
+    border-radius: 8px;
+  }
+
+  &__Summary {
+    color: inherit;
+    font-size: 20px;
+    border-radius: 8px 8px 0 0;
+  }
 }

@@ -1,85 +1,69 @@
 @import '../../colors.scss';
 
-.Container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.Header {
-  color: $crayola;
-  font-weight: bold;
-  font-size: 24px;
-  margin: 0px;
-  padding: 0px;
-  text-align: center;
-}
-
-.SubHeader {
-  color: $crayola;
-  font-weight: bold;
-  font-size: 24px;
-  margin: 0px;
-  margin-bottom: 16px;
-  padding: 0px;
-  text-align: center;
-}
-
-.Body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  border-top: 1px solid $dark-charcoal;
-  padding: 16px 0;
-}
-
-.ListContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.ListTitle {
-  color: $crayola;
-  font-weight: bold;
-  font-size: 18px;
-  margin: 0px;
-  padding: 0px;
-  padding: 16px 0px;
-  text-align: center;
-  border-bottom: 1px solid $dark-charcoal;
-}
-
 .DarkTheme {
   color: $vivid-yellow;
-}
-
-.DarkTheme .Header {
-  color: $vivid-yellow;
-}
-
-.DarkTheme .SubHeader {
-  color: $crayola;
-}
-
-.DarkTheme .ListTitle {
-  color: $crayola;
+  .StarshipCard__Header {
+    color: $vivid-yellow;
+  }
+  .StarshipCard__SubHeader {
+    color: $crayola;
+  }
+  .ChartCard__Title {
+    color: $crayola;
+  }
 }
 
 .LightTheme {
   color: $crayola;
+  .StarshipCard__Header {
+    color: $crayola;
+  }
+  .StarshipCard__SubHeader {
+    color: $dark-charcoal;
+  }
+  .ChartCard__Title {
+    color: $dark-charcoal;
+  }
 }
 
-.LightTheme .Header {
-  color: $crayola;
+.StarshipCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+
+  &__Header, &__SubHeader {
+    color: $crayola;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__Body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 16px 0;
+    border-top: 1px solid $dark-charcoal;
+  }
 }
 
-.LightTheme .SubHeader {
-  color: $dark-charcoal;
-}
+.ChartCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-.LightTheme .ListTitle {
-  color: $dark-charcoal;
+  &__Title {
+    color: $crayola;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+    padding: 16px 0px;
+    text-align: center;
+    border-bottom: 1px solid $dark-charcoal;
+  }
 }

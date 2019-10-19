@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CardList from '../common/CardList/CardList';
-import CardCraftLink from '../common/CardCraftLink/CardCraftLink';
+import CardStarshipLink from '../common/CardStarshipLink/CardStarshipLink';
 import CardCharacter from '../common/CardCharacter/CardCharacter';
 import { ThemeConsumer } from '../../contexts/ThemeContext';
 
@@ -16,14 +16,14 @@ class Character extends Component {
       <ThemeConsumer>
         {props => {
           return (
-            <div className={[styles.Container, styles[props]].join(' ')}>
-              <p className={styles.Header}>{this.state.character.name}</p>
-              <div className={styles.Body}>
+            <div className={[styles.CharacterCard, styles[props]].join(' ')}>
+              <p className={styles.CharacterCard__Header}>{this.state.character.name}</p>
+              <div className={styles.CharacterCard__Body}>
                 <CardCharacter card={this.state.character} theme={props} />
-                <div className={styles.ListContainer}>
-                  <p className={styles.ListTitle}>Piloted Starships</p>
+                <div className={styles.CharacterCard__ShipList}>
+                  <p className={styles.CharacterCard__ShipListTitle}>Piloted Starships</p>
                   <CardList
-                    component={CardCraftLink}
+                    component={CardStarshipLink}
                     direction={'column'}
                     cards={this.state.character.starships}
                     theme={props}

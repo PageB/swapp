@@ -11,18 +11,19 @@
   color: $crayola;
 }
 
-.Card {
+.StarshipCard {
   display: flex;
   flex-direction: column;
+  margin: 0 16px;
   width: $card-width;
   border-radius: 8px;
 
-  &__Title {
-    border-radius: 8px 8px 0 0;
+  &__Name {
     color: inherit;
     font-weight: bold;
     font-size: 18px;
     text-align: center;
+    border-radius: 8px 8px 0 0px0;
   }
 
   &__Image {
@@ -31,7 +32,7 @@
     width: $card-image-width;
   }
 
-  &__TextDetails {
+  &__Details {
     color: inherit;
     background-color: inherit;
     padding: 0 16px;

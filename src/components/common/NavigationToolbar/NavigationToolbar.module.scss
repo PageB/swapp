@@ -1,41 +1,44 @@
 @import '../../../colors.scss';
 
-.Toolbar {
-  height: 56px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: $black;
-  color: $crayola;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 0 16px;
-}
-
-.Logo img {
-  height: 56px;
-  cursor: pointer;
-}
-
-.NavMenu a {
-  color: inherit;
-  margin: 0 4px;
-  text-decoration: none;
-}
-
-.NavMenu a:hover {
-  color: $vivid-yellow;
-  margin: 0 4px;
-  text-decoration: none;
-}
-
 .DarkTheme {
   background-color: $dark-charcoal;
 }
 
 .LightTheme {
   background-color: $black;
+}
+
+.Toolbar {
+  height: 56px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: $crayola;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 16px;
+
+  &__Logo {
+    img {
+      height: 56px;
+      cursor: pointer;
+    }
+  }
+
+  &__Menu {
+    a {
+      color: inherit;
+      margin: 0 4px;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $vivid-yellow;
+      margin: 0 4px;
+      text-decoration: none;
+    }
+  }
 }

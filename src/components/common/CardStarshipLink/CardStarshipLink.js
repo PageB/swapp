@@ -1,14 +1,14 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import styles from './CardCharacterLink.module.scss';
+import styles from './CardStarshipLink.module.scss';
 
-const cardCharacterLink = withRouter(props => {
+const cardStarshipLink = withRouter(props => {
   return (
     <div
       className={[styles.Card, styles[props.theme]].join(' ')}
       onClick={() => {
-        props.history.push(`/character/${props.card.id}`, props.card);
+        props.history.push(`/starship/${props.card.id}`, props.card);
       }}
     >
       <img className={styles.Card__Image} src={props.card.image} alt={props.card.name} />
@@ -19,4 +19,4 @@ const cardCharacterLink = withRouter(props => {
   );
 });
 
-export default cardCharacterLink;
+export default cardStarshipLink;

@@ -1,7 +1,8 @@
 @import '../../../colors.scss';
+@import '../../../constants.scss';
 
 .Chart {
-  width: 280px;
+  width: $card-width;
 }
 
 .DarkTheme {
@@ -10,8 +11,4 @@
 
 .LightTheme {
   color: $crayola;
-}
-
-.DarkTheme .apexcharts-canvas {
-  background: yellow;
 }

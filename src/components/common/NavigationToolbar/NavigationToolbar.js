@@ -7,10 +7,10 @@ import styles from './NavigationToolbar.module.scss';
 const navigationToolbar = props => {
   return (
     <header className={[styles.Toolbar, styles[props.theme]].join(' ')}>
-      <div className={styles.Logo} onClick={props.themeChanged}>
+      <div className={styles.Toolbar__Logo} onClick={props.themeChanged}>
         <img src={SWLogo} alt="StarWars App" />
       </div>
-      <nav className={styles.NavMenu}>
+      <nav className={styles.Toolbar__Menu}>
         <Link to="/episodes">Episodes</Link>
         <Link to="/characters">Characters</Link>
         {/* <Link>Logout</Link> */}

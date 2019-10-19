@@ -1,9 +1,9 @@
 import React from 'react';
-import CardCraft from '../src/components/CardCraft/CardCraft';
+import CardStarship from '../src/components/CardStarship/CardStarship';
 import { action } from '@storybook/addon-actions';
 
 export default {
-  title: 'SW CardCraft',
+  title: 'SW CardStarship',
 };
 
 const character = {
@@ -17,4 +17,4 @@ const character = {
   rating: 1
 }
 
-export const CardCraftView = () => <CardCraft card={character} navTo={action('Handle input change action.')}/>;
+export const CardStarshipView = () => <CardStarship card={character} navTo={action('Handle input change action.')}/>;

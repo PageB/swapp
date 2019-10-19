@@ -1,42 +1,5 @@
 @import '../../../colors.scss';
-
-.Card {
-  background-color: $dark-charcoal;
-  border-radius: 8px;
-  color: $vivid-yellow;
-  width: 280px;
-  margin: 8px 16px;
-  cursor: pointer;
-}
-
-.CardImage {
-  border-radius: 8px 8px 0px 0px;
-  width: 280px;
-}
-
-.CardDetails {
-  color: inherit;
-  background-color: inherit;
-  padding: 0 16px;
-}
-
-.CardTitle {
-  border-radius: 8px 8px 0px 0px;
-  color: inherit;
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.CardSummary {
-  color: $cadet-blue;
-  font-weight: normal;
-  display: block;
-  display: -webkit-box;
-  -webkit-line-clamp: 8;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+@import '../../../constants.scss';
 
 .DarkTheme {
   background-color: $dark-charcoal;
@@ -46,4 +9,42 @@
 .LightTheme {
   background-color: $white;
   color: $crayola;
+}
+
+.CardEpisode {
+  background-color: $dark-charcoal;
+  color: $vivid-yellow;
+  width: $card-width;
+  margin: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &__Image {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+  }
+
+  &__Details {
+    color: inherit;
+    background-color: inherit;
+    padding: 0 16px;
+  }
+
+  &__Title {
+    border-radius: 8px 8px 0 0;
+    color: inherit;
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  &__Summary {
+    color: $cadet-blue;
+    font-weight: normal;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

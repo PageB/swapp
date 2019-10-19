@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import LoginForm from '../common/LoginForm/LoginForm';
 import { ThemeConsumer } from '../../contexts/ThemeContext';
 
-class Characters extends Component {
+class Login extends Component {
   state = {};
 
   render() {
@@ -20,4 +20,4 @@ class Characters extends Component {
   }
 }
 
-export default Characters;
+export default Login;

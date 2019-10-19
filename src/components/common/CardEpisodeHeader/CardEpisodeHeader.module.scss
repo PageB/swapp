@@ -1,64 +1,63 @@
 @import '../../../colors.scss';
+@import '../../../constants.scss';
+
+.DarkTheme {
+  background-color: $dark-charcoal;
+  color: $vivid-yellow;
+
+  .Card__Title {
+    color: $crayola;
+  }
+}
+
+.LightTheme {
+  background-color: $white;
+  color: $crayola;
+
+  .Card__Title {
+    color: $dark-charcoal;
+  }
+}
 
 .Card {
-  background-color: $dark-charcoal;
   border-radius: 8px;
-  color: $vivid-yellow;
   cursor: pointer;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   margin: 16px;
-}
 
-.CardImage {
-  border-radius: 8px 0 0 8px;
-  max-width: 280px;
-  flex: 1;
-}
+  &__Image {
+    border-radius: 8px 0 0 8px;
+    max-width: $card-width;
+    flex: 1;
+  }
 
-.CardDetails {
-  color: inherit;
-  background-color: inherit;
-  padding: 0 16px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 6;
-}
+  &__Details {
+    color: inherit;
+    background-color: inherit;
+    padding: 0 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 6;
+  }
 
-.CardEpiside {
-  color: inherit;
-  font-weight: bold;
-  font-size: 36px;
-  padding: 0;
-  margin: 0;
-}
+  &__Title {
+    color: inherit;
+    font-weight: bold;
+    font-size: 36px;
+    padding: 0;
+    margin: 0;
+  }
 
-.CardTitle {
-  border-radius: 8px 8px 0px 0px;
-  color: inherit;
-  font-weight: bold;
-  font-size: 20px;
-  color: $crayola;
-}
-
-.DarkTheme {
-  background-color: $dark-charcoal;
-  color: $vivid-yellow;
-}
-
-.DarkTheme .CardTitle {
-  color: $crayola;
-}
-
-.LightTheme {
-  background-color: $white;
-  color: $crayola;
-}
-
-.LightTheme .CardTitle {
-  color: $dark-charcoal;
+  &__Subtitle {
+    border-radius: 8px 8px 0px 0px;
+    color: inherit;
+    font-weight: bold;
+    font-size: 20px;
+    color: $crayola;
+  }
 }

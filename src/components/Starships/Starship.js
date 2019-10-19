@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardCraft from '../common/CardCraft/CardCraft';
+import CardStarship from '../common/CardStarship/CardStarship';
 import CardChart from '../common/CardChart/CardChart';
 import { ThemeConsumer } from '../../contexts/ThemeContext';
 
@@ -15,13 +15,13 @@ class Character extends Component {
       <ThemeConsumer>
         {props => {
           return (
-            <div className={[styles.Container, styles[props]].join(' ')}>
-              <p className={styles.Header}>{this.state.starship.name}</p>
-              <p className={styles.SubHeader}>{this.state.starship.shipClass}</p>
-              <div className={styles.Body}>
-                <CardCraft starship={this.state.starship} theme={props} />
-                <div className={styles.ListContainer}>
-                  <p className={styles.ListTitle}>Compared to Starship Class Max</p>
+            <div className={[styles.StarshipCard, styles[props]].join(' ')}>
+              <p className={styles.StarshipCard__Header}>{this.state.starship.name}</p>
+              <p className={styles.StarshipCard__SubHeader}>{this.state.starship.model}</p>
+              <div className={styles.StarshipCard__Body}>
+                <CardStarship starship={this.state.starship} theme={props} />
+                <div className={styles.ChartCard}>
+                  <p className={styles.ChartCard__Title}>Compared to Starship Class Max</p>
                   <CardChart starship={this.state.starship} theme={props} />
                 </div>
               </div>

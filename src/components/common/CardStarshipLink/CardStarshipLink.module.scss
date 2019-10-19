@@ -1,32 +1,39 @@
 @import '../../../colors.scss';
+@import '../../../constants.scss';
 
 .DarkTheme {
   background-color: $dark-charcoal;
-  color: $cadet-blue;
+  color: $vivid-yellow;
 }
 
 .LightTheme {
-  background: $white;
-  color: $black-coral;
+  background-color: $white;
+  color: $crayola;
 }
 
 .Card {
   cursor: pointer;
   display: flex;
   flex-direction: row;
-  margin: 16px;
+  width: $card-width;
+  margin: 8px 16px;
   border-radius: 8px;
 
-  &__Details {
+  &__Image {
+    border-radius: 8px 0 0 8px;
+    width: 60px;
+  }
+
+  &__Title {
     color: inherit;
     background-color: inherit;
     padding: 0 16px;
-    border-radius: 8px;
   }
 
-  &__Summary {
+  &__Text {
+    border-radius: 8px 8px 0px 0px;
     color: inherit;
+    font-weight: bold;
     font-size: 20px;
-    border-radius: 8px 8px 0 0;
   }
 }

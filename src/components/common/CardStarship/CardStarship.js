@@ -1,14 +1,18 @@
 import React from 'react';
 import CardRowData from '../CardRowData/CardRowData';
 
-import styles from './CardCraft.module.scss';
+import styles from './CardStarship.module.scss';
 
-const cardCraft = props => {
+const cardStarship = props => {
   return (
-    <div className={[styles.Card, styles[props.theme]].join(' ')}>
-      <p className={styles.CardName}>{props.starship.name}</p>
-      <img className={styles.CardImage} src={props.starship.image} alt={props.starship.name} />
-      <div className={styles.CardDetails}>
+    <div className={[styles.StarshipCard, styles[props.theme]].join(' ')}>
+      <p className={styles.StarshipCard__Name}>{props.starship.name}</p>
+      <img
+        className={styles.StarshipCard__Image}
+        src={props.starship.image}
+        alt={props.starship.name}
+      />
+      <div className={styles.StarshipCard__Details}>
         <CardRowData label="Class: " theme={props.theme}>
           {props.starship.starshipClass}
         </CardRowData>
@@ -29,4 +33,4 @@ const cardCraft = props => {
   );
 };
 
-export default cardCraft;
+export default cardStarship;

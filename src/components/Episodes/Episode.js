@@ -18,7 +18,7 @@ class Episode extends Component {
       <ThemeConsumer>
         {props => {
           return (
-            <div className={styles.Container}>
+            <div className={styles.EpisodeCard}>
               <CardEpisodeHeader card={this.state.episode} theme={props} />
               <CardEpisodeSummary card={this.state.episode} theme={props} />
               <CardList

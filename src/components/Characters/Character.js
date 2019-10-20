@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CardList from '../common/CardList/CardList';
-import CardStarshipLink from '../common/CardStarshipLink/CardStarshipLink';
+import CardLink from '../common/CardLink/CardLink';
 import CardCharacter from '../common/CardCharacter/CardCharacter';
 import { ThemeConsumer } from '../../contexts/ThemeContext';
 
@@ -9,6 +9,10 @@ import styles from './Character.module.scss';
 class Character extends Component {
   state = {
     character: this.props.location.state,
+  };
+
+  navigationHandler = card => {
+    this.props.history.push(`/starship/${card.id}`, card);
   };
 
   render() {
@@ -23,10 +27,11 @@ class Character extends Component {
                 <div className={styles.CharacterCard__ShipList}>
                   <p className={styles.CharacterCard__ShipListTitle}>Piloted Starships</p>
                   <CardList
-                    component={CardStarshipLink}
                     direction={'column'}
-                    cards={this.state.character.starships}
                     theme={props}
+                    cards={this.state.character.starships}
+                    component={CardLink}
+                    cardNavigation={this.navigationHandler}
                   />
                 </div>
               </div>

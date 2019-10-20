@@ -1,13 +1,17 @@
 import React, { Component, Fragment } from 'react';
 import CardList from '../common/CardList/CardList';
-import CardCharacterLink from '../common/CardCharacterLink/CardCharacterLink';
+import CardLink from '../common/CardLink/CardLink';
 import { ThemeConsumer } from '../../contexts/ThemeContext';
 import { fetchStarWarsCharacters } from '../../data';
 
 class Characters extends Component {
-  state = {
-    characters: [],
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      characters: [],
+    };
+  }
 
   async componentDidMount() {
     try {
@@ -18,13 +22,22 @@ class Characters extends Component {
     }
   }
 
+  navigationHandler = card => {
+    this.props.history.push(`/character/${card.id}`, card);
+  };
+
   render() {
     return (
       <ThemeConsumer>
         {props => {
           return (
             <Fragment>
-              <CardList component={CardCharacterLink} cards={this.state.characters} theme={props} />
+              <CardList
+                theme={props}
+                cards={this.state.characters}
+                component={CardLink}
+                cardNavigation={this.navigationHandler}
+              />
             </Fragment>
           );
         }}

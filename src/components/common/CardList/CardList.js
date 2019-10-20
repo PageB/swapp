@@ -12,9 +12,9 @@ class cardList extends Component {
    * @param {Object} cards
    * @return {JSX Object}
    */
-  renderCardItems(CardItem, cards, theme) {
+  renderCardItems(cards, CardItem, cardTheme, cardNavigation) {
     return cards.map(card => {
-      return <CardItem key={card.id} card={card} theme={theme} />;
+      return <CardItem key={card.id} card={card} theme={cardTheme} navigate={cardNavigation} />;
     });
   }
 
@@ -25,11 +25,11 @@ class cardList extends Component {
    * @return {Object}
    */
   render() {
-    const { component: CardItem, cards, theme, direction } = this.props;
+    const { cards, component: CardItem, theme: cardTheme, cardNavigation, direction } = this.props;
 
     return (
       <div className={styles.CardList} style={{ flexDirection: direction }}>
-        {this.renderCardItems(CardItem, cards, theme)}
+        {this.renderCardItems(cards, CardItem, cardTheme, cardNavigation)}
       </div>
     );
   }

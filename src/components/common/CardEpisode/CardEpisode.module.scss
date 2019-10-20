@@ -1,16 +1,6 @@
 @import '../../../colors.scss';
 @import '../../../constants.scss';
 
-.DarkTheme {
-  background-color: $dark-charcoal;
-  color: $vivid-yellow;
-}
-
-.LightTheme {
-  background-color: $white;
-  color: $crayola;
-}
-
 .CardEpisode {
   background-color: $dark-charcoal;
   color: $vivid-yellow;
@@ -47,4 +37,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+
+.DarkTheme {
+  background-color: $dark-charcoal;
+  color: $vivid-yellow;
+}
+
+.LightTheme {
+  background-color: $white;
+  color: $crayola;
 }

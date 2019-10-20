@@ -18,7 +18,6 @@ const Button = props => {
 Button.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.string,
-  type: PropTypes.string,
   type: PropTypes.oneOf(['button', 'reset', 'submit']),
 };
 

@@ -1,21 +1,13 @@
 @import '../../../colors.scss';
 @import '../../../constants.scss';
 
-.DarkTheme {
-  background-color: $dark-charcoal;
-  color: $vivid-yellow;
-}
-
-.LightTheme {
-  background-color: $white;
-  color: $crayola;
-}
-
 .Card {
   display: flex;
   flex-direction: column;
   width: $card-width;
   border-radius: 8px;
+  background-color: $dark-charcoal;
+  color: $vivid-yellow;
 
   &__Title {
     border-radius: 8px 8px 0 0;
@@ -38,4 +30,14 @@
     font-size: 14px;
     border-radius: 8px;
   }
+}
+
+.DarkTheme {
+  background-color: $dark-charcoal;
+  color: $vivid-yellow;
+}
+
+.LightTheme {
+  background-color: $white;
+  color: $crayola;
 }

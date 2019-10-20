@@ -64,7 +64,7 @@ class App extends Component {
               }}
             </ThemeConsumer>
             <Switch>
-              <Route path="/" component={Login} />
+              {/* <Route path="/" component={Login} /> */}
               <Route path="/episodes" component={Episodes} />
               <Route path="/episode/:episodeId" component={Episode} />
               <Route path="/characters" component={Characters} />

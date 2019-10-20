@@ -17,7 +17,6 @@ const Input = props => {
 };
 
 Input.propTypes = {
-  type: PropTypes.string,
   type: PropTypes.oneOf(['text', 'number', 'email', 'password']),
   placeholder: PropTypes.string,
   name: PropTypes.string,

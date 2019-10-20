@@ -28,7 +28,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "cross-env CI=true npm run full-check",
+      "pre-push": "cross-env CI=true npm run push-check",
       "pre-commit": "cross-env CI=true npm run commit-check"
     }
   },

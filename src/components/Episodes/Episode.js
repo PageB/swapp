@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import CardEpisodeHeader from '../common/CardEpisodeHeader/CardEpisodeHeader';
-import CardEpisodeSummary from '../common/CardEpisodeSummary/CardEpisodeSummary';
+import Button from '../common/Button/Button';
 import CardList from '../common/CardList/CardList';
 import CardLink from '../common/CardLink/CardLink';
-import Button from '../common/Button/Button';
+import CardEpisodeHeader from '../common/CardEpisodeHeader/CardEpisodeHeader';
+import CardEpisodeSummary from '../common/CardEpisodeSummary/CardEpisodeSummary';
 import { ThemeConsumer } from '../../contexts/ThemeContext';
 
 import styles from './Episode.module.scss';

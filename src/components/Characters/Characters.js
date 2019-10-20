@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import CardList from '../common/CardList/CardList';
 import CardLink from '../common/CardLink/CardLink';
 import { ThemeConsumer } from '../../contexts/ThemeContext';
-import { fetchStarWarsCharacters } from '../../data';
+import { fetchStarWarsCharacters } from '../../mock/data';
 
 class Characters extends Component {
   constructor(props) {

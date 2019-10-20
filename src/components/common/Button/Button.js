@@ -18,10 +18,12 @@ const Button = props => {
 Button.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.string,
+  theme: PropTypes.oneOf(['DarkTheme', 'LightTheme']),
   type: PropTypes.oneOf(['button', 'reset', 'submit']),
 };
 
 Button.defaultProps = {
+  theme: 'DarkTheme',
   type: 'button',
 };
 

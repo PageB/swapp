@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
 import { AUTH } from '../../../constants';
@@ -97,5 +98,13 @@ class LoginForm extends Component {
     );
   }
 }
+
+LoginForm.propTypes = {
+  theme: PropTypes.oneOf(['DarkTheme', 'LightTheme']),
+};
+
+LoginForm.defaultProps = {
+  theme: 'DarkTheme',
+};
 
 export default LoginForm;

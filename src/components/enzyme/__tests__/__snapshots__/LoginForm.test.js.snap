@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm Component should match snapshot 1`] = `
+<form
+  className="Form DarkTheme"
+  onSubmit={[Function]}
+>
+  <p />
+  <Input
+    name="email"
+    onChange={[Function]}
+    placeholder="Email"
+    type="text"
+    value=""
+  />
+  <Input
+    name="password"
+    onChange={[Function]}
+    placeholder="Password"
+    type="password"
+    value=""
+  />
+  <Button
+    theme="DarkTheme"
+    type="submit"
+  >
+    Login
+  </Button>
+</form>
+`;

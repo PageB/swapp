@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CardRowData from '../CardRowData/CardRowData';
 
 import styles from './CardStarship.module.scss';
@@ -31,6 +32,14 @@ const cardStarship = props => {
       </div>
     </div>
   );
+};
+
+cardStarship.propTypes = {
+  theme: PropTypes.oneOf(['DarkTheme', 'LightTheme']),
+};
+
+cardStarship.defaultProps = {
+  theme: 'DarkTheme',
 };
 
 export default cardStarship;

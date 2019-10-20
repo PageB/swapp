@@ -1,19 +1,33 @@
 @import '../../../colors.scss';
 
-.DarkTheme {
-  .CardDataLabel {
+.Row {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+
+  &__DataLabel {
     color: $crayola;
   }
-  .CardDataValue {
+
+  &__DataLabel {
+    color: $vivid-yellow;
+  }
+}
+
+.DarkTheme {
+  .Row__DataLabel {
+    color: $crayola;
+  }
+  .Row__DataLabel {
     color: $vivid-yellow;
   }
 }
 
 .LightTheme {
-  .CardDataLabel {
+  .Row__DataLabel {
     color: $black-coral;
   }
-  .CardDataValue {
+  .Row__DataLabel {
     color: $crayola;
   }
 }

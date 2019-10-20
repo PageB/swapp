@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SWLogo from '../../../assets/images/SWLogo.png';
 import { Link } from 'react-router-dom';
 
@@ -17,6 +18,14 @@ const navigationToolbar = props => {
       </nav>
     </header>
   );
+};
+
+navigationToolbar.propTypes = {
+  theme: PropTypes.oneOf(['DarkTheme', 'LightTheme']),
+};
+
+navigationToolbar.defaultProps = {
+  theme: 'DarkTheme',
 };
 
 export default navigationToolbar;

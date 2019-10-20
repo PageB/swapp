@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardStarship Component should match snapshot 1`] = `
+<div
+  className="StarshipCard DarkTheme"
+>
+  <p
+    className="StarshipCard__Name"
+  >
+    Jedi Starfighter
+  </p>
+  <img
+    alt="Jedi Starfighter"
+    className="StarshipCard__Image"
+    src="https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg"
+  />
+  <div
+    className="StarshipCard__Details"
+  >
+    <cardRowData
+      label="Class: "
+      theme="DarkTheme"
+    >
+      starfighter
+    </cardRowData>
+    <cardRowData
+      label="Cost: "
+      theme="DarkTheme"
+    >
+      631
+    </cardRowData>
+    <cardRowData
+      label="Crew: "
+      theme="DarkTheme"
+    >
+      108
+    </cardRowData>
+    <cardRowData
+      label="Max Atmospheric speed: "
+      theme="DarkTheme"
+    >
+      1159
+    </cardRowData>
+    <cardRowData
+      label="Hyperdrive Rating: "
+      theme="DarkTheme"
+    >
+      150
+    </cardRowData>
+  </div>
+</div>
+`;

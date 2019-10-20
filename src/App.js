@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { ThemeConsumer } from './contexts/ThemeContext';
 import Nav from './components/common/NavigationToolbar/NavigationToolbar';
-import Login from './components/Login/Login';
+// import Login from './components/Login/Login';
 import Episode from './components/Episodes/Episode';
 import Episodes from './components/Episodes/Episodes';
 import Character from './components/Characters/Character';

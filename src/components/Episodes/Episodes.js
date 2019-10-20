@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import CardList from '../common/CardList/CardList';
 import CardEpisode from '../common/CardEpisode/CardEpisode';
 import { ThemeConsumer } from '../../contexts/ThemeContext';
-import { fetchStarWarsEpisodes } from '../../data';
+import { fetchStarWarsEpisodes } from './../../mock/data';
 
 class Episodes extends Component {
   state = {

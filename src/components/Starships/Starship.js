@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CardStarship from '../common/CardStarship/CardStarship';
 import CardChart from '../common/CardChart/CardChart';
+import CardStarship from '../common/CardStarship/CardStarship';
 import { ThemeConsumer } from '../../contexts/ThemeContext';
 
 import styles from './Starship.module.scss';

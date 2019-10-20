@@ -36,7 +36,6 @@ class cardList extends Component {
 }
 
 cardList.propTypes = {
-  direction: PropTypes.string,
   direction: PropTypes.oneOf(['column', 'row']),
 };
 

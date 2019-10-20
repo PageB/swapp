@@ -6,7 +6,11 @@ import { AUTH } from '../../../constants';
 import styles from './LoginForm.module.scss';
 
 class LoginForm extends Component {
-  state = { email: '', password: '', errorMessage: 'Invalid login.' };
+  constructor(props) {
+    super(props);
+
+    this.state = { email: '', password: '', errorMessage: this.props.errorMessage };
+  }
 
   handleInputChange = ({ currentTarget }) => {
     this.setState({ [currentTarget.name]: currentTarget.value });
@@ -15,14 +19,15 @@ class LoginForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const url = 'http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql/signIn';
+    const url = 'http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql';
     const options = {
-      method: 'post',
+      method: 'POST',
       headers: {
-        Authorization:
-          'Bearer eyJhbGciOiJIUzI123iIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTZmYTFl YTQxYTA4MGY4YjIxMjMwMiIsImVtYWlsIjoiZGVtb0BzdDYuaW8iL CJyb2xlIjoiQURNSU4iL1KHHASDHXQiOjE1NzAxNzYwMjksImV4c CI6MTU3MDE3NzgyOX0.1vYZfspRxVA9wV_FbHL5N0YoVM8ZVQ z9y09LfAgjwSc',
+        Authentication: '',
       },
-      body: `email=${this.state.email}&password=${this.state.password}`,
+      body: JSON.stringify({
+        mutation: `{ signIn(email: ${this.state.email} password: ${this.state.password}) }`,
+      }),
     };
 
     fetch(url, options)
@@ -72,7 +77,7 @@ class LoginForm extends Component {
       >
         {LoginErrorMessage}
         <Input
-          type="type"
+          type="text"
           placeholder="Email"
           name="email"
           value={email}

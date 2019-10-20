@@ -1,22 +1,14 @@
 @import '../../../colors.scss';
 @import '../../../constants.scss';
 
-.DarkTheme {
-  background-color: $dark-charcoal;
-  color: $vivid-yellow;
-}
-
-.LightTheme {
-  background-color: $white;
-  color: $crayola;
-}
-
 .StarshipCard {
   display: flex;
   flex-direction: column;
   margin: 0 16px;
   width: $card-width;
   border-radius: 8px;
+  background-color: $dark-charcoal;
+  color: $vivid-yellow;
 
   &__Name {
     color: inherit;
@@ -39,4 +31,14 @@
     font-size: 14px;
     border-radius: 8px;
   }
+}
+
+.DarkTheme {
+  background-color: $dark-charcoal;
+  color: $vivid-yellow;
+}
+
+.LightTheme {
+  background-color: $white;
+  color: $crayola;
 }

@@ -1,11 +1,27 @@
 import React from 'react';
-import CardCharacterLink from '../src/components/common/CardCharacterLink/CardCharacterLink';
+import CardLink from '../src/components/common/CardLink/CardLink';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { action } from '@storybook/addon-actions';
 
 export default {
-  title: 'SW CardCharacterLink',
+  title: 'SW CardLink',
 };
+
+const starship = {
+  id: 100,
+  name: 'Jedi Starfighter',
+  image: 'https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg',
+}
+
+export const starshipLink = () => {
+  return (
+    <Router>
+      <Switch>
+        <CardLink card={starship}/>;
+      </Switch>
+    </Router>
+  )
+}
 
 const character = {
   id: 100,
@@ -17,7 +33,7 @@ export const characterLink = () => {
   return (
     <Router>
       <Switch>
-        <CardCharacterLink card={character}/>;
+        <CardLink card={character}/>;
       </Switch>
     </Router>
   )

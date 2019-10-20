@@ -1,15 +1,12 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 
-import styles from './CardStarshipLink.module.scss';
+import styles from './CardLink.module.scss';
 
-const cardStarshipLink = withRouter(props => {
+const cardLink = props => {
   return (
     <div
       className={[styles.Card, styles[props.theme]].join(' ')}
-      onClick={() => {
-        props.history.push(`/starship/${props.card.id}`, props.card);
-      }}
+      onClick={() => props.navigate(props.card)}
     >
       <img className={styles.Card__Image} src={props.card.image} alt={props.card.name} />
       <div className={styles.Card__Title}>
@@ -17,6 +14,6 @@ const cardStarshipLink = withRouter(props => {
       </div>
     </div>
   );
-});
+};
 
-export default cardStarshipLink;
+export default cardLink;

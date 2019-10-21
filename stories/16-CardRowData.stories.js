@@ -1,5 +1,5 @@
 import React from 'react';
-import CardChart from '../src/components/common/CardChart/CardChart';
+import CardChart from '../src/components/CardChart/CardChart';
 import { starWarsCharacters } from '../src/mock/data'
 
 export default {

@@ -1,5 +1,5 @@
 import React from 'react';
-import CardStarship from '../src/components/common/CardStarship/CardStarship';
+import CardStarship from '../src/components/CardStarship/CardStarship';
 import { starWarsCharacters } from '../src/mock/data'
 import { action } from '@storybook/addon-actions';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import CardRowData from '../src/components/common/CardRowData/CardRowData';
+import CardRowData from '../src/components/CardRowData/CardRowData';
 
 export default {
   title: 'SW CardRowData',

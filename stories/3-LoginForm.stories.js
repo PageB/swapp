@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginForm from '../src/components/common/LoginForm/LoginForm';
+import LoginForm from '../src/components/LoginForm/LoginForm';
 
 export default {
   title: 'SW LoginForm',

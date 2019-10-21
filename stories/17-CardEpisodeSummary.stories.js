@@ -1,5 +1,5 @@
 import React from 'react';
-import CardEpisodeSummary from '../src/components/common/CardEpisodeSummary/CardEpisodeSummary';
+import CardEpisodeSummary from '../src/components/CardEpisodeSummary/CardEpisodeSummary';
 import { starWarsEpisodes } from '../src/mock/data';
 
 export default {

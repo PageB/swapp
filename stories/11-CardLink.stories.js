@@ -1,5 +1,5 @@
 import React from 'react';
-import CardLink from '../src/components/common/CardLink/CardLink';
+import CardLink from '../src/components/CardLink/CardLink';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { action } from '@storybook/addon-actions';
 

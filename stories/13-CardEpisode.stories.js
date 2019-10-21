@@ -1,5 +1,5 @@
 import React from 'react';
-import CardEpisode from '../src/components/common/CardEpisode/CardEpisode';
+import CardEpisode from '../src/components/CardEpisode/CardEpisode';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { starWarsEpisodes } from '../src/mock/data';
 

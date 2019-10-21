@@ -1,6 +1,6 @@
 import React from 'react';
-import CardList from '../src/components/common/CardList/CardList';
-import CardLink from '../src/components/common/CardLink/CardLink';
+import CardList from '../src/components/CardList/CardList';
+import CardLink from '../src/components/CardLink/CardLink';
 import { starWarsCharacters } from '../src/mock/data'
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 // import { action } from '@storybook/addon-actions';

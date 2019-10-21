@@ -65,11 +65,11 @@ class App extends Component {
             </ThemeConsumer>
             <Switch>
               {/* <Route path="/" component={Login} /> */}
-              <Route path="/episodes" component={Episodes} />
-              <Route path="/episode/:episodeId" component={Episode} />
-              <Route path="/characters" component={Characters} />
-              <Route path="/character/:characterId" component={Character} />
-              <Route path="/starship/:starshipId" component={Starship} />
+              <Route exact path="/episodes" component={Episodes} />
+              <Route path="/episodes/:episodeId" component={Episode} />
+              <Route exact path="/characters" component={Characters} />
+              <Route path="/characters/:characterId" component={Character} />
+              <Route path="/starships/:starshipId" component={Starship} />
             </Switch>
           </Fragment>
         </ThemeProvider>

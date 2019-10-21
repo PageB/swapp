@@ -12,7 +12,7 @@ class Character extends Component {
   };
 
   navigationHandler = card => {
-    this.props.history.push(`/starship/${card.id}`, card);
+    this.props.history.push(`/starships/${card.id}`, card);
   };
 
   render() {

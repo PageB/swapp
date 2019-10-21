@@ -18,13 +18,22 @@ class Episodes extends Component {
     }
   }
 
+  navigationHandler = card => {
+    this.props.history.push(`/episodes/${card.id}`, card);
+  };
+
   render() {
     return (
       <ThemeConsumer>
         {props => {
           return (
             <Fragment>
-              <CardList component={CardEpisode} cards={this.state.episodes} theme={props} />
+              <CardList
+                component={CardEpisode}
+                cards={this.state.episodes}
+                theme={props}
+                cardNavigation={this.navigationHandler}
+              />
             </Fragment>
           );
         }}

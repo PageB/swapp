@@ -1,16 +1,13 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import styles from './CardEpisode.module.scss';
 
-const cardEpisode = withRouter(props => {
+const cardEpisode = props => {
   return (
     <div
       className={[styles.CardEpisode, styles[props.theme]].join(' ')}
-      onClick={() => {
-        props.history.push(`/episode/${props.card.id}`, props.card);
-      }}
+      onClick={() => props.navigate(props.card)}
     >
       <img className={styles.CardEpisode__Image} src={props.card.image} alt={props.card.title} />
       <div className={styles.CardEpisode__Details}>
@@ -19,7 +16,7 @@ const cardEpisode = withRouter(props => {
       </div>
     </div>
   );
-});
+};
 
 cardEpisode.propTypes = {
   theme: PropTypes.oneOf(['DarkTheme', 'LightTheme']),

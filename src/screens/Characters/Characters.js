@@ -23,7 +23,7 @@ class Characters extends Component {
   }
 
   navigationHandler = card => {
-    this.props.history.push(`/character/${card.id}`, card);
+    this.props.history.push(`/characters/${card.id}`, card);
   };
 
   render() {

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardEpisodeHeader Component should match snapshot 1`] = `
+<div
+  className="Card DarkTheme"
+>
+  <img
+    alt="The Phantom Menace"
+    className="Card__Image"
+    src="https://images-na.ssl-images-amazon.com/images/I/81Vl2RQrZkL._SX522_.jpg"
+  />
+  <div
+    className="Card__Details"
+  >
+    <p
+      className="Card__Title"
+    >
+      Star Wars: Episode I
+    </p>
+    <p
+      className="Card__SubTitle"
+    >
+      The Phantom Menace
+    </p>
+  </div>
+</div>
+`;

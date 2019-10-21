@@ -1,7 +1,7 @@
 import React from 'react';
 import CardEpisode from '../src/components/common/CardEpisode/CardEpisode';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
-import { starWarsEpisodes } from './../../mock/data';
+import { starWarsEpisodes } from '../src/mock/data';
 
 export default {
   title: 'SW CardEpisode',

@@ -1,6 +1,6 @@
 import React from 'react';
 import CardCharacter from '../src/components/common/CardCharacter/CardCharacter';
-import { starWarsCharacters } from './../../mock/data';
+import { starWarsCharacters } from '../src/mock/data'
 import { action } from '@storybook/addon-actions';
 
 export default {

@@ -1,0 +1,41 @@
+@import '../../colors.scss';
+@import '../../constants.scss';
+
+.Card {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  width: $card-width;
+  margin: 8px 16px;
+  background-color: $dark-charcoal;
+  color: $vivid-yellow;
+  border-radius: 8px;
+
+  &__Image {
+    border-radius: 8px 0 0 8px;
+    width: 60px;
+  }
+
+  &__Title {
+    color: inherit;
+    background-color: inherit;
+    padding: 0 16px;
+  }
+
+  &__Text {
+    color: inherit;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+.DarkTheme {
+  background-color: $dark-charcoal;
+  color: $vivid-yellow;
+}
+
+.LightTheme {
+  background-color: $white;
+  color: $crayola;
+}

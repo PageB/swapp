@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardLink Component should match snapshot 1`] = `
+<div
+  className="Card DarkTheme"
+  onClick={[Function]}
+>
+  <img
+    alt="Jedi Starfighter"
+    className="Card__Image"
+    src="https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg"
+  />
+  <div
+    className="Card__Title"
+  >
+    <p
+      className="Card__Text"
+    >
+      Jedi Starfighter
+    </p>
+  </div>
+</div>
+`;

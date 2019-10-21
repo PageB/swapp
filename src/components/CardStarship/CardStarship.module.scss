@@ -1,0 +1,44 @@
+@import '../../colors.scss';
+@import '../../constants.scss';
+
+.StarshipCard {
+  display: flex;
+  flex-direction: column;
+  margin: 0 16px;
+  width: $card-width;
+  border-radius: 8px;
+  background-color: $dark-charcoal;
+  color: $vivid-yellow;
+
+  &__Name {
+    color: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 8px 8px 0 0px0;
+  }
+
+  &__Image {
+    border-radius: 8px;
+    padding: 0 16px;
+    width: $card-image-width;
+  }
+
+  &__Details {
+    color: inherit;
+    background-color: inherit;
+    padding: 0 16px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+}
+
+.DarkTheme {
+  background-color: $dark-charcoal;
+  color: $vivid-yellow;
+}
+
+.LightTheme {
+  background-color: $white;
+  color: $crayola;
+}

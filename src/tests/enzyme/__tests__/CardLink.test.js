@@ -1,14 +1,15 @@
 import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
+import { starWarsCharacters } from '../../../mock/data';
 
-import NavigationToolbar from '../../NavigationToolbar/NavigationToolbar';
+import CardLink from '../../../components/CardLink/CardLink';
 
 configure({ adapter: new Adapter() });
 
-describe('NavigationToolbar Component', () => {
+describe('CardLink Component', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<NavigationToolbar />);
+    const wrapper = shallow(<CardLink card={starWarsCharacters[0].starships[0]} />);
 
     expect(wrapper).toMatchSnapshot();
   });

@@ -2,13 +2,13 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
 
-import LoginForm from '../../LoginForm/LoginForm';
+import CardRowData from '../../../components/CardRowData/CardRowData';
 
 configure({ adapter: new Adapter() });
 
-describe('LoginForm Component', () => {
+describe('CardRowData Component', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<LoginForm />);
+    const wrapper = shallow(<CardRowData label="Firstname: ">Martin</CardRowData>);
 
     expect(wrapper).toMatchSnapshot();
   });

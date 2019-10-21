@@ -1,15 +1,14 @@
 import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
-import { starWarsCharacters } from '../../../mock/data';
 
-import CardChart from '../../CardChart/CardChart';
+import Input from '../../../components/Input/Input';
 
 configure({ adapter: new Adapter() });
 
-describe('CardChart Component', () => {
+describe('Input Component', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<CardChart starship={starWarsCharacters[0].starships[0]} />);
+    const wrapper = shallow(<Input />);
 
     expect(wrapper).toMatchSnapshot();
   });

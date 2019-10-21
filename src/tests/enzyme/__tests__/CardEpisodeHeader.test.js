@@ -3,13 +3,13 @@ import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
 import { starWarsEpisodes } from '../../../mock/data';
 
-import CardEpisodeSummary from '../../CardEpisodeSummary/CardEpisodeSummary';
+import CardEpisodeHeader from '../../../components/CardEpisodeHeader/CardEpisodeHeader';
 
 configure({ adapter: new Adapter() });
 
-describe('CardEpisodeSummary Component', () => {
+describe('CardEpisodeHeader Component', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<CardEpisodeSummary card={starWarsEpisodes[0]} />);
+    const wrapper = shallow(<CardEpisodeHeader card={starWarsEpisodes[0]} />);
 
     expect(wrapper).toMatchSnapshot();
   });

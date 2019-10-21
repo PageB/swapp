@@ -2,7 +2,7 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
 
-import CardStarship from '../../CardStarship/CardStarship';
+import CardStarship from '../../../components/CardStarship/CardStarship';
 import { starWarsCharacters } from '../../../mock/data';
 
 configure({ adapter: new Adapter() });

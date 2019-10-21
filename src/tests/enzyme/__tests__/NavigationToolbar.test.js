@@ -2,13 +2,13 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure } from 'enzyme';
 
-import Button from '../../Button/Button';
+import NavigationToolbar from '../../../components/NavigationToolbar/NavigationToolbar';
 
 configure({ adapter: new Adapter() });
 
-describe('Button Component', () => {
+describe('NavigationToolbar Component', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<Button>Login</Button>);
+    const wrapper = shallow(<NavigationToolbar />);
 
     expect(wrapper).toMatchSnapshot();
   });

@@ -1,0 +1,499 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardList Component should match snapshot 1`] = `
+<div
+  className="CardList"
+  style={
+    Object {
+      "flexDirection": "row",
+    }
+  }
+>
+  <cardCharacter
+    card={
+      Object {
+        "birthYear": "",
+        "height": 182,
+        "homeworld": "Stewjon",
+        "id": 1,
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/32/Ben_Kenobi.png",
+        "mass": 77,
+        "name": "Obi-Wan Kenobi",
+        "species": "Human",
+        "starships": Array [
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 100,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 200,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 300,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+        ],
+      }
+    }
+    key="1"
+    theme="DarkTheme"
+  />
+  <cardCharacter
+    card={
+      Object {
+        "birthYear": "",
+        "height": 182,
+        "homeworld": "Stewjon",
+        "id": 2,
+        "image": "https://www.rollingstone.com/wp-content/uploads/2015/12/rs-218591-5-leia-a09cab78-e7a1-4be4-b437-99a1d7d4d280.jpg?resize=1240,1240&w=385",
+        "mass": 77,
+        "name": "Princess Leia",
+        "species": "Human",
+        "starships": Array [
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 100,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 200,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 300,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+        ],
+      }
+    }
+    key="2"
+    theme="DarkTheme"
+  />
+  <cardCharacter
+    card={
+      Object {
+        "birthYear": "",
+        "height": 182,
+        "homeworld": "Stewjon",
+        "id": 3,
+        "image": "https://www.rollingstone.com/wp-content/uploads/2015/12/rs-218589-4-yoda-6a430ef2-4be5-43d5-8614-e743ca7b2f69.jpg?resize=1240,1240&w=385",
+        "mass": 77,
+        "name": "Yoda",
+        "species": "Human",
+        "starships": Array [
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 100,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 200,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 300,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+        ],
+      }
+    }
+    key="3"
+    theme="DarkTheme"
+  />
+  <cardCharacter
+    card={
+      Object {
+        "birthYear": "",
+        "height": 182,
+        "homeworld": "Stewjon",
+        "id": 4,
+        "image": "https://www.rollingstone.com/wp-content/uploads/2015/12/rs-218587-3-boba-fett-9dce897b-f605-4fae-9de7-dfbf95ab1a2d.jpg?resize=1240,1240&w=385",
+        "mass": 77,
+        "name": "Boba Fett",
+        "species": "Human",
+        "starships": Array [
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 100,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 200,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 300,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+        ],
+      }
+    }
+    key="4"
+    theme="DarkTheme"
+  />
+  <cardCharacter
+    card={
+      Object {
+        "birthYear": "",
+        "height": 182,
+        "homeworld": "Stewjon",
+        "id": 5,
+        "image": "https://www.rollingstone.com/wp-content/uploads/2015/12/rs-218586-2-vader-f6cdf838-912c-4bfa-8a12-f43521fbd99c.jpg?resize=1240,1240&w=385",
+        "mass": 77,
+        "name": "Darth Vader",
+        "species": "Human",
+        "starships": Array [
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 100,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 200,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 300,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+        ],
+      }
+    }
+    key="5"
+    theme="DarkTheme"
+  />
+  <cardCharacter
+    card={
+      Object {
+        "birthYear": "",
+        "height": 182,
+        "homeworld": "Stewjon",
+        "id": 6,
+        "image": "https://www.rollingstone.com/wp-content/uploads/2015/12/rs-218584-1-han-f4c9a887-81df-4c58-b166-94ab4485286b.jpg?resize=1240,1240&w=385",
+        "mass": 77,
+        "name": "Han Solo",
+        "species": "Human",
+        "starships": Array [
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 100,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 200,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 300,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+        ],
+      }
+    }
+    key="6"
+    theme="DarkTheme"
+  />
+  <cardCharacter
+    card={
+      Object {
+        "birthYear": "",
+        "height": 182,
+        "homeworld": "Stewjon",
+        "id": 7,
+        "image": "https://www.rollingstone.com/wp-content/uploads/2015/12/bb8.jpg?resize=1240,1240&w=385",
+        "mass": 77,
+        "name": "BB-8",
+        "species": "Human",
+        "starships": Array [
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 100,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 200,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 300,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+        ],
+      }
+    }
+    key="7"
+    theme="DarkTheme"
+  />
+  <cardCharacter
+    card={
+      Object {
+        "birthYear": "",
+        "height": 182,
+        "homeworld": "Stewjon",
+        "id": 8,
+        "image": "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-218664-7-r2d2-cc3a79ac-5212-4452-852d-27eacea91652.jpg?resize=1240,1240&w=385",
+        "mass": 77,
+        "name": "R2-D2",
+        "species": "Human",
+        "starships": Array [
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 100,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 200,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 300,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+        ],
+      }
+    }
+    key="8"
+    theme="DarkTheme"
+  />
+  <cardCharacter
+    card={
+      Object {
+        "birthYear": "",
+        "height": 182,
+        "homeworld": "Stewjon",
+        "id": 9,
+        "image": "https://www.rollingstone.com/wp-content/uploads/2015/12/rs-218592-6-luke-cd70ba0f-828e-4231-9c8d-f8d6ab92a07b.jpg?resize=1240,1240&w=385",
+        "mass": 77,
+        "name": "Luke Skywalker",
+        "species": "Human",
+        "starships": Array [
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 100,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 200,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+          Object {
+            "cost": 631,
+            "crew": 108,
+            "hyperdriveRating": 150,
+            "id": 300,
+            "image": "https://www.super-hobby.com/zdjecia/7/1/9/20828_rd.jpg",
+            "maxAtmosphericSpeed": 1159,
+            "maxMLPerHour": 631,
+            "model": "Delta-7 Aethersprite-class Starfighter",
+            "name": "Jedi Starfighter",
+            "starshipClass": "starfighter",
+          },
+        ],
+      }
+    }
+    key="9"
+    theme="DarkTheme"
+  />
+</div>
+`;

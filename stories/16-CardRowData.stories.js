@@ -1,6 +1,6 @@
 import React from 'react';
-import CardChart from '../src/components/common/CardChart/CardChart';
-import { starWarsCharacters } from './../../mock/data';
+import CardChart from '../src/components/CardChart/CardChart';
+import { starWarsCharacters } from '../src/mock/data'
 
 export default {
   title: 'SW CardChart',

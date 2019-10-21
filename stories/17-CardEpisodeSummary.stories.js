@@ -1,6 +1,6 @@
 import React from 'react';
-import CardEpisodeSummary from '../src/components/common/CardEpisodeSummary/CardEpisodeSummary';
-import { starWarsEpisodes } from './../../mock/data';
+import CardEpisodeSummary from '../src/components/CardEpisodeSummary/CardEpisodeSummary';
+import { starWarsEpisodes } from '../src/mock/data';
 
 export default {
   title: 'SW CardEpisodeSummary',

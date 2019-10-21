@@ -1,0 +1,14 @@
+@import '../../colors.scss';
+@import '../../constants.scss';
+
+.Chart {
+  width: $card-width;
+}
+
+.DarkTheme {
+  color: $vivid-yellow;
+}
+
+.LightTheme {
+  color: $crayola;
+}

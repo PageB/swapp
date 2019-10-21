@@ -2,13 +2,13 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { ThemeConsumer } from './contexts/ThemeContext';
-import Nav from './components/common/NavigationToolbar/NavigationToolbar';
-// import Login from './components/Login/Login';
-import Episode from './components/Episodes/Episode';
-import Episodes from './components/Episodes/Episodes';
-import Character from './components/Characters/Character';
-import Characters from './components/Characters/Characters';
-import Starship from './components/Starships/Starship';
+import Nav from './components/NavigationToolbar/NavigationToolbar';
+// import Login from './screens/Login/Login';
+import Episode from './screens/Episodes/Episode';
+import Episodes from './screens/Episodes/Episodes';
+import Character from './screens/Characters/Character';
+import Characters from './screens/Characters/Characters';
+import Starship from './screens/Starships/Starship';
 
 class App extends Component {
   state = {
@@ -65,11 +65,11 @@ class App extends Component {
             </ThemeConsumer>
             <Switch>
               {/* <Route path="/" component={Login} /> */}
-              <Route path="/episodes" component={Episodes} />
-              <Route path="/episode/:episodeId" component={Episode} />
-              <Route path="/characters" component={Characters} />
-              <Route path="/character/:characterId" component={Character} />
-              <Route path="/starship/:starshipId" component={Starship} />
+              <Route exact path="/episodes" component={Episodes} />
+              <Route path="/episodes/:episodeId" component={Episode} />
+              <Route exact path="/characters" component={Characters} />
+              <Route path="/characters/:characterId" component={Character} />
+              <Route path="/starships/:starshipId" component={Starship} />
             </Switch>
           </Fragment>
         </ThemeProvider>

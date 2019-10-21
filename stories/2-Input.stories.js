@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../src/components/common/Input/Input';
+import Input from '../src/components/Input/Input';
 import { action } from '@storybook/addon-actions';
 
 export default {

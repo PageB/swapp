@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationToolbar Component should match snapshot 1`] = `
+<header
+  className="Toolbar DarkTheme"
+>
+  <div
+    className="Toolbar__Logo"
+  >
+    <img
+      alt="StarWars App"
+      src="SWLogo.png"
+    />
+  </div>
+  <nav
+    className="Toolbar__Menu"
+  >
+    <Link
+      to="/episodes"
+    >
+      Episodes
+    </Link>
+    <Link
+      to="/characters"
+    >
+      Characters
+    </Link>
+  </nav>
+</header>
+`;

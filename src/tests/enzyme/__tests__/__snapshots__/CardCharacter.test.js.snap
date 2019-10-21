@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardCharacter Component should match snapshot 1`] = `
+<div
+  className="Card DarkTheme"
+>
+  <p
+    className="Card__Title"
+  >
+    Obi-Wan Kenobi
+  </p>
+  <img
+    alt="Obi-Wan Kenobi"
+    className="Card__Image"
+    src="https://upload.wikimedia.org/wikipedia/en/3/32/Ben_Kenobi.png"
+  />
+  <div
+    className="Card__TextDetails"
+  >
+    <cardRowData
+      label="Height: "
+      theme="DarkTheme"
+    >
+      182
+    </cardRowData>
+    <cardRowData
+      label="Weight: "
+      theme="DarkTheme"
+    >
+      77
+    </cardRowData>
+    <cardRowData
+      label="Species: "
+      theme="DarkTheme"
+    >
+      Human
+    </cardRowData>
+    <cardRowData
+      label="Home World: "
+      theme="DarkTheme"
+    >
+      Stewjon
+    </cardRowData>
+  </div>
+</div>
+`;

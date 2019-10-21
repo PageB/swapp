@@ -1,0 +1,50 @@
+@import '../../colors.scss';
+@import '../../constants.scss';
+
+.CardEpisode {
+  background-color: $dark-charcoal;
+  color: $vivid-yellow;
+  width: $card-width;
+  margin: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &__Image {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+  }
+
+  &__Details {
+    color: inherit;
+    background-color: inherit;
+    padding: 0 16px;
+  }
+
+  &__Title {
+    border-radius: 8px 8px 0 0;
+    color: inherit;
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  &__Summary {
+    color: $cadet-blue;
+    font-weight: normal;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.DarkTheme {
+  background-color: $dark-charcoal;
+  color: $vivid-yellow;
+}
+
+.LightTheme {
+  background-color: $white;
+  color: $crayola;
+}

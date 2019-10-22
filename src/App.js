@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { ThemeConsumer } from './contexts/ThemeContext';
 import Nav from './components/NavigationToolbar/NavigationToolbar';
-// import Login from './screens/Login/Login';
+import Login from './screens/Login/Login';
 import Episode from './screens/Episodes/Episode';
 import Episodes from './screens/Episodes/Episodes';
 import Character from './screens/Characters/Character';
@@ -64,7 +64,7 @@ class App extends Component {
               }}
             </ThemeConsumer>
             <Switch>
-              {/* <Route path="/" component={Login} /> */}
+              <Route path="/" component={Login} />
               <Route exact path="/episodes" component={Episodes} />
               <Route path="/episodes/:episodeId" component={Episode} />
               <Route exact path="/characters" component={Characters} />

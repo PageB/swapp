@@ -49,7 +49,7 @@
       }
     },
     "coverageReporters": [
-      "text"
+      "text", "html"
     ]
   },
   "prettier": {

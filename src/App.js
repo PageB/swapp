@@ -16,7 +16,7 @@ const client = new ApolloClient({
   uri: 'https://swapp.st6.io/graphql',
   headers: {
     Authorization:
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTZmYTFlYTQxYTA4MGY4YjIxMjMwMiIsImVtYWlsIjoiZGVtb0BzdDYuaW8iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE1NzIwODI2MjYsImV4cCI6MTU3MjA4NDQyNn0.bfNhGPPdbPCVxsVXMO10snSzwd8N5eoDgkfB43FJLiY',
+      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTZmYTFlYTQxYTA4MGY4YjIxMjMwMiIsImVtYWlsIjoiZGVtb0BzdDYuaW8iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE1NzIwOTk2MTYsImV4cCI6MTU3MjEwMTQxNn0.4dyFrItYAmvIWMWS6sA59RDq8_xhT0tyajl-lvPBRss',
   },
 });
 

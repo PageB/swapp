@@ -12,8 +12,8 @@ const cardCharacter = props => {
       <div className={styles.Card__TextDetails}>
         <CardRowData label="Height: ">{props.card.height}</CardRowData>
         <CardRowData label="Weight: ">{props.card.mass}</CardRowData>
-        <CardRowData label="Species: ">{props.card.species}</CardRowData>
-        <CardRowData label="Home World: ">{props.card.homeworld}</CardRowData>
+        <CardRowData label="Species: ">{props.card.species.name}</CardRowData>
+        <CardRowData label="Home World: ">{props.card.homeworld.name}</CardRowData>
       </div>
     </div>
   );

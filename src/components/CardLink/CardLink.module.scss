@@ -10,7 +10,8 @@
   background-color: $dark-charcoal;
   color: $vivid-yellow;
   border-radius: 8px;
-
+  max-height: 68px;
+  
   &__Image {
     border-radius: 8px 0 0 8px;
     width: 60px;

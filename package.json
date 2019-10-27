@@ -20,7 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "testCoverage": "npm t -- --coverage --watchAll=false",
+    "coverage": "npm t -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "format": "prettier --write \"src/**/*.{js,json}\"",

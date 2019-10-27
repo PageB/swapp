@@ -1,9 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
-import { ThemeConsumer } from './contexts/ThemeContext';
 import Nav from './components/NavigationToolbar/NavigationToolbar';
-// import Login from './screens/Login/Login';
+import Login from './screens/Login/Login';
 import Episode from './screens/Episodes/Episode';
 import Episodes from './screens/Episodes/Episodes';
 import Character from './screens/Characters/Character';
@@ -16,7 +15,7 @@ const client = new ApolloClient({
   uri: 'https://swapp.st6.io/graphql',
   headers: {
     Authorization:
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTZmYTFlYTQxYTA4MGY4YjIxMjMwMiIsImVtYWlsIjoiZGVtb0BzdDYuaW8iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE1NzIxMTI2MTAsImV4cCI6MTU3MjExNDQxMH0.6iiVJVbPu0RZocXIFewFwQWe0HWmcJ-qX9JwXg8b3r0',
+      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTZmYTFlYTQxYTA4MGY4YjIxMjMwMiIsImVtYWlsIjoiZGVtb0BzdDYuaW8iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE1NzIxNzc0OTAsImV4cCI6MTU3MjE3OTI5MH0.GX4no7G2MoVLP1hrCeqtts0MDghPhzrN9nfP4nn2jF0',
   },
 });
 
@@ -66,16 +65,12 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
-        <Router>
-          <ThemeProvider value={this.state.theme}>
+        <ThemeProvider value={this.state.theme}>
+          <Router>
             <Fragment>
-              <ThemeConsumer>
-                {props => {
-                  return <Nav themeChanged={this.themeChangeHandler} theme={props} />;
-                }}
-              </ThemeConsumer>
+              <Nav themeChanged={this.themeChangeHandler} />
               <Switch>
-                {/* <Route path="/" component={Login} /> */}
+                <Route path="/" component={Login} />
                 <Route exact path="/episodes" component={Episodes} />
                 <Route path="/episodes/:episodeId" component={Episode} />
                 <Route exact path="/characters" component={Characters} />
@@ -83,8 +78,8 @@ class App extends Component {
                 <Route path="/starships/:starshipId" component={Starship} />
               </Switch>
             </Fragment>
-          </ThemeProvider>
-        </Router>
+          </Router>
+        </ThemeProvider>
       </ApolloProvider>
     );
   }

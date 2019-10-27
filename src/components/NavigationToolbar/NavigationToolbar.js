@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import ThemeContext from '../../contexts/ThemeContext';
 import SWLogo from '../../assets/images/SWLogo.png';
 import { Link } from 'react-router-dom';
 
 import styles from './NavigationToolbar.module.scss';
 
-const navigationToolbar = props => {
+const NavigationToolbar = props => {
+  const theme = useContext(ThemeContext);
+
   return (
-    <header className={[styles.Toolbar, styles[props.theme]].join(' ')}>
+    <header className={[styles.Toolbar, styles[theme]].join(' ')}>
       <div className={styles.Toolbar__Logo} onClick={props.themeChanged}>
         <img src={SWLogo} alt="StarWars App" />
       </div>
@@ -20,12 +23,12 @@ const navigationToolbar = props => {
   );
 };
 
-navigationToolbar.propTypes = {
+NavigationToolbar.propTypes = {
   theme: PropTypes.oneOf(['DarkTheme', 'LightTheme']),
 };
 
-navigationToolbar.defaultProps = {
+NavigationToolbar.defaultProps = {
   theme: 'DarkTheme',
 };
 
-export default navigationToolbar;
+export default NavigationToolbar;

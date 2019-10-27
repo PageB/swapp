@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ThemeContext from '../../contexts/ThemeContext';
 import { useHistory, useParams, useLocation } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import Loading from '../../components/Loading/Loading';
@@ -7,12 +8,12 @@ import CardList from '../../components/CardList/CardList';
 import CardLink from '../../components/CardLink/CardLink';
 import CardEpisodeHeader from '../../components/CardEpisodeHeader/CardEpisodeHeader';
 import CardEpisodeSummary from '../../components/CardEpisodeSummary/CardEpisodeSummary';
-import { ThemeConsumer } from '../../contexts/ThemeContext';
 import { EPISODE } from '../../queries/episodes';
 
 import styles from './Episode.module.scss';
 
 const Episode = () => {
+  const theme = useContext(ThemeContext);
   const { state } = useLocation();
   const { episodeId } = useParams();
   const history = useHistory();
@@ -50,27 +51,21 @@ const Episode = () => {
   };
 
   return (
-    <ThemeConsumer>
-      {props => {
-        return (
-          <div className={styles.EpisodeCard}>
-            <CardEpisodeHeader card={state} theme={props} />
-            <CardEpisodeSummary card={state} theme={props} />
-            <CardList
-              theme={props}
-              cards={people.edges}
-              component={CardLink}
-              cardNavigation={navigationHandler}
-            />
-            {people.pageInfo.hasNextPage && (
-              <Button onClick={loadMore} theme={props}>
-                Load More
-              </Button>
-            )}
-          </div>
-        );
-      }}
-    </ThemeConsumer>
+    <div className={styles.EpisodeCard}>
+      <CardEpisodeHeader card={state} theme={theme} />
+      <CardEpisodeSummary card={state} theme={theme} />
+      <CardList
+        theme={theme}
+        cards={people.edges}
+        component={CardLink}
+        cardNavigation={navigationHandler}
+      />
+      {people.pageInfo.hasNextPage && (
+        <Button onClick={loadMore} theme={theme}>
+          Load More
+        </Button>
+      )}
+    </div>
   );
 };
 

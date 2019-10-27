@@ -1,23 +1,15 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, useContext } from 'react';
+import ThemeContext from '../../contexts/ThemeContext';
 import LoginForm from '../../components/LoginForm/LoginForm';
-import { ThemeConsumer } from '../../contexts/ThemeContext';
 
-class Login extends Component {
-  state = {};
+const Login = () => {
+  const theme = useContext(ThemeContext);
 
-  render() {
-    return (
-      <ThemeConsumer>
-        {props => {
-          return (
-            <Fragment>
-              <LoginForm theme={props} />
-            </Fragment>
-          );
-        }}
-      </ThemeConsumer>
-    );
-  }
-}
+  return (
+    <Fragment>
+      <LoginForm theme={theme} />
+    </Fragment>
+  );
+};
 
 export default Login;

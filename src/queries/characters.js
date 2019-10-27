@@ -1,8 +1,12 @@
 import gql from 'graphql-tag.macro';
 
 export const ALL_CHARACTERS = gql`
-  query {
-    allPeople(first: 40) {
+  query getPeople($after: String) {
+    allPeople(first: 12, after: $after) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
       edges {
         node {
           id
@@ -14,8 +18,8 @@ export const ALL_CHARACTERS = gql`
   }
 `;
 export const CHARACTER = gql`
-  query {
-    person(id: "people.11") {
+  query getCharacter($id: ID!) {
+    person(id: $id) {
       id
       name
       birthYear

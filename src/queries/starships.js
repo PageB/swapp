@@ -21,8 +21,8 @@ export const ALL_STARSHIPS = gql`
   }
 `;
 export const STARSHIP = gql`
-  query {
-    starship(id: "starships.13") {
+  query getStarship($id: ID!) {
+    starship(id: $id) {
       id
       name
       model

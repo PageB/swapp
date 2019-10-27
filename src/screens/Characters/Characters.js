@@ -4,19 +4,38 @@ import { useQuery } from '@apollo/react-hooks';
 import CardList from '../../components/CardList/CardList';
 import CardLink from '../../components/CardLink/CardLink';
 import Loading from '../../components/Loading/Loading';
+import Button from '../../components/Button/Button';
 import { ThemeConsumer } from '../../contexts/ThemeContext';
 import { ALL_CHARACTERS } from '../../queries/characters';
 
 const Characters = () => {
-  const { data, error, loading } = useQuery(ALL_CHARACTERS);
+  const { data, error, loading, fetchMore } = useQuery(ALL_CHARACTERS);
   const history = useHistory();
 
   if (loading) return <Loading />;
   if (error) return <p>error</p>;
 
   const {
-    allPeople: { edges },
+    allPeople: { edges, pageInfo },
   } = data;
+
+  const loadMore = () => {
+    fetchMore({
+      variables: { after: pageInfo.endCursor },
+      updateQuery: (prev, { fetchMoreResult: { allPeople } }) => {
+        if (!allPeople.edges.length) {
+          return prev;
+        }
+
+        return {
+          allPeople: {
+            ...allPeople,
+            edges: [...prev.allPeople.edges, ...allPeople.edges],
+          },
+        };
+      },
+    });
+  };
 
   const navigationHandler = card => {
     history.push(`/characters/${card.id}`, card);
@@ -33,6 +52,11 @@ const Characters = () => {
               component={CardLink}
               cardNavigation={navigationHandler}
             />
+            {pageInfo.hasNextPage && (
+              <Button onClick={loadMore} theme={props}>
+                Load More
+              </Button>
+            )}
           </Fragment>
         );
       }}

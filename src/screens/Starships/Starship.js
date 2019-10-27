@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import Loading from '../../components/Loading/Loading';
 import CardChart from '../../components/CardChart/CardChart';
@@ -9,7 +10,10 @@ import { STARSHIP } from '../../queries/starships';
 import styles from './Starship.module.scss';
 
 const Starship = () => {
-  const { data, error, loading } = useQuery(STARSHIP);
+  const { starshipId } = useParams();
+  const { data, error, loading } = useQuery(STARSHIP, {
+    variables: { id: starshipId },
+  });
 
   if (loading) return <Loading />;
   if (error) return <p>error</p>;

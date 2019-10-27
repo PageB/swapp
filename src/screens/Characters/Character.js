@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import Loading from '../../components/Loading/Loading';
 import CardList from '../../components/CardList/CardList';
@@ -11,8 +11,11 @@ import { CHARACTER } from '../../queries/characters';
 import styles from './Character.module.scss';
 
 const Character = () => {
-  const { data, error, loading } = useQuery(CHARACTER);
+  const { characterId } = useParams();
   const history = useHistory();
+  const { data, error, loading } = useQuery(CHARACTER, {
+    variables: { id: characterId },
+  });
 
   if (loading) return <Loading />;
   if (error) return <p>error</p>;
@@ -33,16 +36,18 @@ const Character = () => {
             <p className={styles.CharacterCard__Header}>{data.person.name}</p>
             <div className={styles.CharacterCard__Body}>
               <CardCharacter card={data.person} theme={props} />
-              <div className={styles.CharacterCard__ShipList}>
-                <p className={styles.CharacterCard__ShipListTitle}>Piloted Starships</p>
-                <CardList
-                  direction={'column'}
-                  theme={props}
-                  cards={starships.edges}
-                  component={CardLink}
-                  cardNavigation={navigationHandler}
-                />
-              </div>
+              {starships.edges.length > 0 && (
+                <div className={styles.CharacterCard__ShipList}>
+                  <p className={styles.CharacterCard__ShipListTitle}>Piloted Starships</p>
+                  <CardList
+                    direction={'column'}
+                    theme={props}
+                    cards={starships.edges}
+                    component={CardLink}
+                    cardNavigation={navigationHandler}
+                  />
+                </div>
+              )}
             </div>
           </div>
         );

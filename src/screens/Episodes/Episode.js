@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams, useLocation } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import Loading from '../../components/Loading/Loading';
 import Button from '../../components/Button/Button';
@@ -13,8 +13,12 @@ import { EPISODE } from '../../queries/episodes';
 import styles from './Episode.module.scss';
 
 const Episode = () => {
-  const { data, error, loading } = useQuery(EPISODE);
+  const { state } = useLocation();
+  const { episodeId } = useParams();
   const history = useHistory();
+  const { data, error, loading, fetchMore } = useQuery(EPISODE, {
+    variables: { id: episodeId, first: 5 },
+  });
 
   if (loading) return <Loading />;
   if (error) return <p>error</p>;
@@ -22,6 +26,24 @@ const Episode = () => {
   const {
     episode: { people },
   } = data;
+
+  const loadMore = () => {
+    fetchMore({
+      variables: { id: episodeId, first: 5, after: people.pageInfo.endCursor },
+      updateQuery: (prev, { fetchMoreResult: { episode } }) => {
+        if (!episode.people.edges.length) {
+          return prev;
+        }
+
+        return {
+          ...episode,
+          people: {
+            edges: [...prev.episode.people.edges, ...episode.people.edges],
+          },
+        };
+      },
+    });
+  };
 
   const navigationHandler = card => {
     history.push(`/characters/${card.id}`, card);
@@ -32,15 +54,19 @@ const Episode = () => {
       {props => {
         return (
           <div className={styles.EpisodeCard}>
-            <CardEpisodeHeader card={data.episode} theme={props} />
-            <CardEpisodeSummary card={data.episode} theme={props} />
+            <CardEpisodeHeader card={state} theme={props} />
+            <CardEpisodeSummary card={state} theme={props} />
             <CardList
               theme={props}
               cards={people.edges}
               component={CardLink}
               cardNavigation={navigationHandler}
             />
-            <Button theme={props}>Load More</Button>
+            {people.pageInfo.hasNextPage && (
+              <Button onClick={loadMore} theme={props}>
+                Load More
+              </Button>
+            )}
           </div>
         );
       }}

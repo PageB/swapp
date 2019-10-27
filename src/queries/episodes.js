@@ -16,8 +16,8 @@ export const ALL_EPISODES = gql`
   }
 `;
 export const EPISODE = gql`
-  query {
-    episode(id: "films.1") {
+  query getEpisode($id: ID!, $first: Int, $after: String) {
+    episode(id: $id) {
       id
       title
       episodeId
@@ -25,7 +25,11 @@ export const EPISODE = gql`
       image
       director
       releaseDate
-      people {
+      people(first: $first, after: $after) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
         edges {
           node {
             id

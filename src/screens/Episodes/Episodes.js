@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/react-hooks';
 import CardList from '../../components/CardList/CardList';
 import CardEpisode from '../../components/CardEpisode/CardEpisode';
 import Loading from '../../components/Loading/Loading';
+import LoadingError from '../../components/LoadingError/LoadingError';
 import { ALL_EPISODES } from '../../queries/episodes';
 
 const Episodes = () => {
@@ -13,7 +14,7 @@ const Episodes = () => {
   const { data, error, loading } = useQuery(ALL_EPISODES);
 
   if (loading) return <Loading />;
-  if (error) return <p>error</p>;
+  if (error) return <LoadingError theme={theme} />;
 
   const {
     allEpisodes: { edges },

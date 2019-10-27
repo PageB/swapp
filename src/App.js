@@ -70,7 +70,7 @@ class App extends Component {
             <Fragment>
               <Nav themeChanged={this.themeChangeHandler} />
               <Switch>
-                <Route path="/" component={Login} />
+                {/* <Route path="/" component={Login} /> */}
                 <Route exact path="/episodes" component={Episodes} />
                 <Route path="/episodes/:episodeId" component={Episode} />
                 <Route exact path="/characters" component={Characters} />

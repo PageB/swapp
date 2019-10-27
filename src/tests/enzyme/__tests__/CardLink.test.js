@@ -10,9 +10,6 @@ configure({ adapter: new Adapter() });
 
 describe('CardLink Component', () => {
   it('should match snapshot', () => {
-    console.log('============here============');
-    console.log(starWarsCharacters[0].node.starships[0]);
-    console.log('============here============');
     const wrapper = shallow(<CardLink card={starWarsCharacters[0].node.starships[0]} />);
 
     expect(wrapper).toMatchSnapshot();

@@ -3,6 +3,7 @@ import ThemeContext from '../../contexts/ThemeContext';
 import { useHistory, useParams, useLocation } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import Loading from '../../components/Loading/Loading';
+import LoadingError from '../../components/LoadingError/LoadingError';
 import Button from '../../components/Button/Button';
 import CardList from '../../components/CardList/CardList';
 import CardLink from '../../components/CardLink/CardLink';
@@ -22,7 +23,7 @@ const Episode = () => {
   });
 
   if (loading) return <Loading />;
-  if (error) return <p>error</p>;
+  if (error) return <LoadingError />;
 
   const {
     episode: { people },

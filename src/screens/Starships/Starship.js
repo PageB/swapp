@@ -3,6 +3,7 @@ import ThemeContext from '../../contexts/ThemeContext';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import Loading from '../../components/Loading/Loading';
+import LoadingError from '../../components/LoadingError/LoadingError';
 import CardChart from '../../components/CardChart/CardChart';
 import CardStarship from '../../components/CardStarship/CardStarship';
 import { STARSHIP } from '../../queries/starships';
@@ -17,7 +18,7 @@ const Starship = () => {
   });
 
   if (loading) return <Loading />;
-  if (error) return <p>error</p>;
+  if (error) return <LoadingError />;
 
   return (
     <div className={[styles.StarshipCard, styles[theme]].join(' ')}>

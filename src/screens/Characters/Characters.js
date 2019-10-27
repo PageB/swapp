@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/react-hooks';
 import CardList from '../../components/CardList/CardList';
 import CardLink from '../../components/CardLink/CardLink';
 import Loading from '../../components/Loading/Loading';
+import LoadingError from '../../components/LoadingError/LoadingError';
 import Button from '../../components/Button/Button';
 import { ALL_CHARACTERS } from '../../queries/characters';
 
@@ -14,7 +15,7 @@ const Characters = () => {
   const { data, error, loading, fetchMore } = useQuery(ALL_CHARACTERS);
 
   if (loading) return <Loading />;
-  if (error) return <p>error</p>;
+  if (error) return <LoadingError />;
 
   const {
     allPeople: { edges, pageInfo },

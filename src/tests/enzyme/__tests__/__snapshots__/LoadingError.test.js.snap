@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingError Component should match snapshot 1`] = `
+<div
+  className="LoadingError"
+>
+  <img
+    alt="Error"
+    className="LoadingError__Image"
+    src="error.gif"
+  />
+</div>
+`;

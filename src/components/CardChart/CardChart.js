@@ -4,6 +4,7 @@ import Chart from 'react-apexcharts';
 import PropTypes from 'prop-types';
 import { ALL_STARSHIPS } from '../../queries/starships';
 import Loading from '../../components/Loading/Loading';
+import LoadingError from '../../components/LoadingError/LoadingError';
 
 import styles from './CardChart.module.scss';
 
@@ -11,7 +12,7 @@ const CardChart = props => {
   const { data, error, loading } = useQuery(ALL_STARSHIPS);
 
   if (loading) return <Loading />;
-  if (error) return <p>error</p>;
+  if (error) return <LoadingError />;
 
   const {
     allStarships: { edges },

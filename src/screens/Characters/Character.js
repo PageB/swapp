@@ -3,6 +3,7 @@ import ThemeContext from '../../contexts/ThemeContext';
 import { useHistory, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import Loading from '../../components/Loading/Loading';
+import LoadingError from '../../components/LoadingError/LoadingError';
 import CardList from '../../components/CardList/CardList';
 import CardLink from '../../components/CardLink/CardLink';
 import CardCharacter from '../../components/CardCharacter/CardCharacter';
@@ -19,7 +20,7 @@ const Character = () => {
   });
 
   if (loading) return <Loading />;
-  if (error) return <p>error</p>;
+  if (error) return <LoadingError />;
 
   const {
     person: { starships },

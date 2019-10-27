@@ -9,7 +9,7 @@ configure({ adapter: new Adapter() });
 
 describe('CardCharacter Component', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<CardCharacter card={starWarsCharacters[0]} />);
+    const wrapper = shallow(<CardCharacter card={starWarsCharacters[0].node} />);
 
     expect(wrapper).toMatchSnapshot();
   });

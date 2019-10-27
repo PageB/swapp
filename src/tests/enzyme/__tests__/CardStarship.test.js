@@ -9,7 +9,7 @@ configure({ adapter: new Adapter() });
 
 describe('CardStarship Component', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<CardStarship starship={starWarsCharacters[0].starships[0]} />);
+    const wrapper = shallow(<CardStarship starship={starWarsCharacters[0].node.starships[0]} />);
 
     expect(wrapper).toMatchSnapshot();
   });

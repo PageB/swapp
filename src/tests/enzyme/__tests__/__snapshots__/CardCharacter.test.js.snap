@@ -32,15 +32,11 @@ exports[`CardCharacter Component should match snapshot 1`] = `
     <cardRowData
       label="Species: "
       theme="DarkTheme"
-    >
-      Human
-    </cardRowData>
+    />
     <cardRowData
       label="Home World: "
       theme="DarkTheme"
-    >
-      Stewjon
-    </cardRowData>
+    />
   </div>
 </div>
 `;

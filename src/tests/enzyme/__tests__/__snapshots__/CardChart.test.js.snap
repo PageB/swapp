@@ -1,72 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardChart Component should match snapshot 1`] = `
-<div
-  className="Chart DarkTheme"
->
-  <p />
-  <r
-    height="350"
-    options={
-      Object {
-        "chart": Object {
-          "background": "#000",
-          "toolbar": Object {
-            "show": false,
-          },
-        },
-        "colors": Array [
-          "#FFE300",
-        ],
-        "dataLabels": Object {
-          "style": Object {
-            "colors": Array [
-              "#4BD5EE",
-            ],
-          },
-        },
-        "labels": Array [
-          "ML",
-          "Cost",
-          "Crew",
-          "Speed",
-          "Rating",
-        ],
-        "plotOptions": Object {
-          "radar": Object {
-            "polygons": Object {
-              "connectorColors": "#EFF2F7",
-              "fill": Object {
-                "colors": Array [
-                  "#000000",
-                ],
-              },
-              "strokeColors": "#EFF2F7 ",
-            },
-          },
-        },
-        "yaxis": Object {
-          "max": 3000,
-          "show": false,
-        },
-      }
-    }
-    series={
-      Array [
-        Object {
-          "data": Array [
-            631,
-            631,
-            108,
-            1159,
-            150,
-          ],
-          "name": undefined,
-        },
-      ]
-    }
-    type="radar"
-    width="100%"
-  />
-</div>
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
 `;

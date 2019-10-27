@@ -10,7 +10,7 @@ configure({ adapter: new Adapter() });
 
 describe('CardLink Component', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<CardLink card={starWarsCharacters[0].starships[0]} />);
+    const wrapper = shallow(<CardLink card={starWarsCharacters[0].node.starships[0]} />);
 
     expect(wrapper).toMatchSnapshot();
   });
@@ -18,7 +18,7 @@ describe('CardLink Component', () => {
   it('Calls closure when card is clicked', () => {
     const onCardClick = sinon.spy();
     const wrapper = shallow(
-      <CardLink card={starWarsCharacters[0].starships[0]} navigate={onCardClick} />,
+      <CardLink card={starWarsCharacters[0].node.starships[0]} navigate={onCardClick} />,
     );
 
     wrapper.find('.Card').simulate('click');

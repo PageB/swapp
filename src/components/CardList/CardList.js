@@ -14,7 +14,9 @@ class cardList extends Component {
    */
   renderCardItems(cards, CardItem, cardTheme, cardNavigation) {
     return cards.map(card => {
-      return <CardItem key={card.id} card={card} theme={cardTheme} navigate={cardNavigation} />;
+      return (
+        <CardItem key={card.node.id} card={card} theme={cardTheme} navigate={cardNavigation} />
+      );
     });
   }
 

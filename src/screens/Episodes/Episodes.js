@@ -1,45 +1,41 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { useQuery } from '@apollo/react-hooks';
 import CardList from '../../components/CardList/CardList';
 import CardEpisode from '../../components/CardEpisode/CardEpisode';
+import Loading from '../../components/Loading/Loading';
 import { ThemeConsumer } from '../../contexts/ThemeContext';
-import { fetchStarWarsEpisodes } from './../../mock/data';
+import { ALL_EPISODES } from '../../queries/episodes';
 
-class Episodes extends Component {
-  state = {
-    episodes: [],
+const Episodes = () => {
+  const { data, error, loading } = useQuery(ALL_EPISODES);
+  const history = useHistory();
+
+  if (loading) return <Loading />;
+  if (error) return <p>error</p>;
+
+  const {
+    allEpisodes: { edges },
+  } = data;
+
+  const navigationHandler = card => {
+    history.push(`/episodes/${card.id}`, card);
   };
 
-  async componentDidMount() {
-    try {
-      const starWarsCharacters = await fetchStarWarsEpisodes();
-      this.setState({ episodes: starWarsCharacters });
-    } catch (e) {
-      this.setState({ episodes: [] });
-    }
-  }
-
-  navigationHandler = card => {
-    this.props.history.push(`/episodes/${card.id}`, card);
-  };
-
-  render() {
-    return (
-      <ThemeConsumer>
-        {props => {
-          return (
-            <Fragment>
-              <CardList
-                component={CardEpisode}
-                cards={this.state.episodes}
-                theme={props}
-                cardNavigation={this.navigationHandler}
-              />
-            </Fragment>
-          );
-        }}
-      </ThemeConsumer>
-    );
-  }
-}
+  return (
+    <ThemeConsumer>
+      {props => {
+        return (
+          <CardList
+            component={CardEpisode}
+            cards={edges}
+            theme={props}
+            cardNavigation={navigationHandler}
+          />
+        );
+      }}
+    </ThemeConsumer>
+  );
+};
 
 export default Episodes;

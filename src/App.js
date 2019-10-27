@@ -9,6 +9,16 @@ import Episodes from './screens/Episodes/Episodes';
 import Character from './screens/Characters/Character';
 import Characters from './screens/Characters/Characters';
 import Starship from './screens/Starships/Starship';
+import { ApolloProvider } from '@apollo/react-hooks';
+import ApolloClient from 'apollo-boost';
+
+const client = new ApolloClient({
+  uri: 'https://swapp.st6.io/graphql',
+  headers: {
+    Authorization:
+      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTZmYTFlYTQxYTA4MGY4YjIxMjMwMiIsImVtYWlsIjoiZGVtb0BzdDYuaW8iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE1NzIxMTI2MTAsImV4cCI6MTU3MjExNDQxMH0.6iiVJVbPu0RZocXIFewFwQWe0HWmcJ-qX9JwXg8b3r0',
+  },
+});
 
 class App extends Component {
   state = {
@@ -55,25 +65,27 @@ class App extends Component {
    */
   render() {
     return (
-      <Router>
-        <ThemeProvider value={this.state.theme}>
-          <Fragment>
-            <ThemeConsumer>
-              {props => {
-                return <Nav themeChanged={this.themeChangeHandler} theme={props} />;
-              }}
-            </ThemeConsumer>
-            <Switch>
-              {/* <Route path="/" component={Login} /> */}
-              <Route exact path="/episodes" component={Episodes} />
-              <Route path="/episodes/:episodeId" component={Episode} />
-              <Route exact path="/characters" component={Characters} />
-              <Route path="/characters/:characterId" component={Character} />
-              <Route path="/starships/:starshipId" component={Starship} />
-            </Switch>
-          </Fragment>
-        </ThemeProvider>
-      </Router>
+      <ApolloProvider client={client}>
+        <Router>
+          <ThemeProvider value={this.state.theme}>
+            <Fragment>
+              <ThemeConsumer>
+                {props => {
+                  return <Nav themeChanged={this.themeChangeHandler} theme={props} />;
+                }}
+              </ThemeConsumer>
+              <Switch>
+                {/* <Route path="/" component={Login} /> */}
+                <Route exact path="/episodes" component={Episodes} />
+                <Route path="/episodes/:episodeId" component={Episode} />
+                <Route exact path="/characters" component={Characters} />
+                <Route path="/characters/:characterId" component={Character} />
+                <Route path="/starships/:starshipId" component={Starship} />
+              </Switch>
+            </Fragment>
+          </ThemeProvider>
+        </Router>
+      </ApolloProvider>
     );
   }
 }

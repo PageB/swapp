@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
-import { AUTH } from '../../constants';
 
 import styles from './LoginForm.module.scss';
 
@@ -10,7 +9,7 @@ class LoginForm extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { email: '', password: '', errorMessage: this.props.errorMessage };
+    this.state = { email: '', password: '', errorMessage: this.props.error };
   }
 
   handleInputChange = ({ currentTarget }) => {
@@ -19,47 +18,7 @@ class LoginForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-
-    const url = 'http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql';
-    const options = {
-      method: 'POST',
-      headers: {
-        Authentication: '',
-      },
-      body: JSON.stringify({
-        mutation: `{ signIn(email: ${this.state.email} password: ${this.state.password}) }`,
-      }),
-    };
-
-    fetch(url, options)
-      .then(response => {
-        debugger;
-        if (!response.ok) {
-          if (response.status === 404) {
-            alert('Email not found, please retry');
-          }
-          if (response.status === 401) {
-            alert('Email and password do not match, please retry');
-          }
-        }
-        return response;
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          document.cookie = 'token=' + data.token;
-          // navigate('/private-area')
-        }
-      });
-  };
-
-  handleeUserData = token => {
-    if (token) {
-      localStorage.removeItem(AUTH.AUTH_TOKEN);
-      // this.props.history.push(`/`);
-    } else {
-      localStorage.setItem(AUTH.AUTH_TOKEN, token);
-    }
+    this.props.login({ variables: { email: this.state.email, password: this.state.password } });
   };
 
   render() {
@@ -82,6 +41,7 @@ class LoginForm extends Component {
           placeholder="Email"
           name="email"
           value={email}
+          autocomplete="on"
           onChange={this.handleInputChange}
         />
         <Input
@@ -89,6 +49,7 @@ class LoginForm extends Component {
           placeholder="Password"
           name="password"
           value={password}
+          autocomplete="on"
           onChange={this.handleInputChange}
         />
         <Button type="submit" theme={this.props.theme}>

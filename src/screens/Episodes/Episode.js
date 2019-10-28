@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import ThemeContext from '../../contexts/ThemeContext';
 import { useHistory, useParams, useLocation } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
+
 import Loading from '../../components/Loading/Loading';
 import LoadingError from '../../components/LoadingError/LoadingError';
 import Button from '../../components/Button/Button';
@@ -9,6 +9,9 @@ import CardList from '../../components/CardList/CardList';
 import CardLink from '../../components/CardLink/CardLink';
 import CardEpisodeHeader from '../../components/CardEpisodeHeader/CardEpisodeHeader';
 import CardEpisodeSummary from '../../components/CardEpisodeSummary/CardEpisodeSummary';
+
+import ThemeContext from '../../contexts/ThemeContext';
+
 import { EPISODE } from '../../queries/episodes';
 
 import styles from './Episode.module.scss';

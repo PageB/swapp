@@ -11,6 +11,7 @@ const Input = props => {
       placeholder={props.placeholder}
       name={props.name}
       value={props.value}
+      autoComplete={props.autocomplete}
       onChange={props.onChange}
     />
   );
@@ -21,6 +22,7 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   name: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  autoComplete: PropTypes.string,
   onChange: PropTypes.func,
 };
 

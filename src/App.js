@@ -1,22 +1,18 @@
-import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { ThemeProvider } from './contexts/ThemeContext';
-import Nav from './components/NavigationToolbar/NavigationToolbar';
-import Login from './screens/Login/Login';
-import Episode from './screens/Episodes/Episode';
-import Episodes from './screens/Episodes/Episodes';
-import Character from './screens/Characters/Character';
-import Characters from './screens/Characters/Characters';
-import Starship from './screens/Starships/Starship';
+import React, { Component } from 'react';
 import { ApolloProvider } from '@apollo/react-hooks';
+import { ThemeProvider } from './contexts/ThemeContext';
+import { BrowserRouter as Router } from 'react-router-dom';
 import ApolloClient from 'apollo-boost';
+
+import Nav from './components/NavigationToolbar/NavigationToolbar';
+import Home from './Home';
 
 const client = new ApolloClient({
   uri: 'https://swapp.st6.io/graphql',
-  headers: {
-    Authorization:
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTZmYTFlYTQxYTA4MGY4YjIxMjMwMiIsImVtYWlsIjoiZGVtb0BzdDYuaW8iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE1NzIxNzc0OTAsImV4cCI6MTU3MjE3OTI5MH0.GX4no7G2MoVLP1hrCeqtts0MDghPhzrN9nfP4nn2jF0',
-  },
+  // headers: {
+  //   Authorization:
+  //     'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTZmYTFlYTQxYTA4MGY4YjIxMjMwMiIsImVtYWlsIjoiZGVtb0BzdDYuaW8iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE1NzIxNzc0OTAsImV4cCI6MTU3MjE3OTI5MH0.GX4no7G2MoVLP1hrCeqtts0MDghPhzrN9nfP4nn2jF0',
+  // },
 });
 
 class App extends Component {
@@ -24,28 +20,22 @@ class App extends Component {
     theme: 'DarkTheme',
   };
 
-  // TODO: Refactor with React hooks
   componentDidMount() {
     document.body.classList.add('DarkTheme');
   }
 
-  // TODO: Refactor with React hooks
   componentWillUnmount() {
     document.body.classList.remove('DarkTheme');
     document.body.classList.remove('LightTheme');
   }
 
   /**
-   * Loop all cards and render each as JSX item.
+   * Change body class names based on theme selection
    *
-   * @method handleThemeChange
-   * @param {JSX Object} CardItem
-   * @param {Object} cards
+   * @method themeChangeHandler
    */
   themeChangeHandler = () => {
-    const currentTheme = this.state.theme;
-
-    if (currentTheme === 'DarkTheme') {
+    if (this.state.theme === 'DarkTheme') {
       document.body.classList.add('LightTheme');
       document.body.classList.remove('DarkTheme');
       this.setState({ theme: 'LightTheme' });
@@ -67,17 +57,8 @@ class App extends Component {
       <ApolloProvider client={client}>
         <ThemeProvider value={this.state.theme}>
           <Router>
-            <Fragment>
-              <Nav themeChanged={this.themeChangeHandler} />
-              <Switch>
-                {/* <Route path="/" component={Login} /> */}
-                <Route exact path="/episodes" component={Episodes} />
-                <Route path="/episodes/:episodeId" component={Episode} />
-                <Route exact path="/characters" component={Characters} />
-                <Route path="/characters/:characterId" component={Character} />
-                <Route path="/starships/:starshipId" component={Starship} />
-              </Switch>
-            </Fragment>
+            <Nav themeChanged={this.themeChangeHandler} />
+            <Home />
           </Router>
         </ThemeProvider>
       </ApolloProvider>

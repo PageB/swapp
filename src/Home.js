@@ -4,7 +4,9 @@ import Screens from './screens';
 import Login from './screens/Login/Login';
 
 const Home = () => {
-  return <Fragment>{false ? <Screens /> : <Login />}</Fragment>;
+  const token = localStorage.getItem('token');
+
+  return <Fragment>{token ? <Screens /> : <Login />}</Fragment>;
 };
 
 export default Home;

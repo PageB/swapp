@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import { useApolloClient, useMutation } from '@apollo/react-hooks';
+import { useHistory } from 'react-router-dom';
+import { useMutation } from '@apollo/react-hooks';
 
 import { LoginForm, Loading } from '../../components';
 
@@ -15,13 +16,12 @@ const SIGN_IN = gql`
 `;
 
 const Login = () => {
-  // const client = useApolloClient();
+  const history = useHistory();
   const theme = useContext(ThemeContext);
-
   const [login, { loading, error = '' }] = useMutation(SIGN_IN, {
     onCompleted: ({ signIn: token }) => {
-      localStorage.setItem('token', token);
-      // client.writeData({ data: { authenticated: true } });
+      localStorage.setItem('token', token.token);
+      history.push(`/episodes`);
     },
     onError: () => {},
   });

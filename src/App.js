@@ -9,10 +9,14 @@ import Home from './Home';
 
 const client = new ApolloClient({
   uri: 'https://swapp.st6.io/graphql',
-  // headers: {
-  //   Authorization:
-  //     'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkOTZmYTFlYTQxYTA4MGY4YjIxMjMwMiIsImVtYWlsIjoiZGVtb0BzdDYuaW8iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE1NzIxNzc0OTAsImV4cCI6MTU3MjE3OTI5MH0.GX4no7G2MoVLP1hrCeqtts0MDghPhzrN9nfP4nn2jF0',
-  // },
+  request: operation => {
+    const token = localStorage.getItem('token');
+    operation.setContext({
+      headers: {
+        authorization: token ? `Bearer ${token}` : '',
+      },
+    });
+  },
 });
 
 class App extends Component {

@@ -7,6 +7,7 @@ exports[`LoginForm Component should match snapshot 1`] = `
 >
   <p />
   <Input
+    autocomplete="on"
     name="email"
     onChange={[Function]}
     placeholder="Email"
@@ -14,6 +15,7 @@ exports[`LoginForm Component should match snapshot 1`] = `
     value=""
   />
   <Input
+    autocomplete="on"
     name="password"
     onChange={[Function]}
     placeholder="Password"

@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { useHistory } from 'react-router-dom';
 import { useMutation } from '@apollo/react-hooks';
 
 import { LoginForm, Loading } from '../../components';
@@ -15,13 +14,12 @@ const SIGN_IN = gql`
   }
 `;
 
-const Login = () => {
-  const history = useHistory();
+const Login = ({ onLogin }) => {
   const theme = useContext(ThemeContext);
   const [login, { loading, error = '' }] = useMutation(SIGN_IN, {
     onCompleted: ({ signIn: token }) => {
       localStorage.setItem('token', token.token);
-      history.push(`/episodes`);
+      onLogin(token.token);
     },
     onError: () => {},
   });

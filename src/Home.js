@@ -1,12 +1,16 @@
-import React, { Fragment } from 'react';
+import React, { useState } from 'react';
 
 import Screens from './screens';
 import Login from './screens/Login/Login';
 
 const Home = () => {
-  const token = localStorage.getItem('token');
+  const [token, setToken] = useState(localStorage.getItem('token'));
 
-  return <Fragment>{token ? <Screens /> : <Login />}</Fragment>;
+  const handleLogin = token => {
+    setToken(token);
+  };
+
+  return <>{token ? <Screens /> : <Login onLogin={handleLogin} />}</>;
 };
 
 export default Home;

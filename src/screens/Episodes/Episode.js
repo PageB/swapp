@@ -28,9 +28,8 @@ const Episode = () => {
   if (loading) return <Loading />;
   if (error) return <LoadingError />;
 
-  const {
-    episode: { people },
-  } = data;
+  const { episode } = data;
+  const { people } = episode;
 
   const loadMore = () => {
     fetchMore({
@@ -41,9 +40,12 @@ const Episode = () => {
         }
 
         return {
-          ...episode,
-          people: {
-            edges: [...prev.episode.people.edges, ...episode.people.edges],
+          episode: {
+            ...episode,
+            people: {
+              ...episode.people,
+              edges: [...prev.episode.people.edges, ...episode.people.edges],
+            },
           },
         };
       },

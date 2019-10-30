@@ -18,6 +18,12 @@ const Episodes = () => {
     allEpisodes: { edges },
   } = data;
 
+  /**
+   * Navigate user with react-router.
+   *
+   * @method navigationHandler
+   * @param {Object} card
+   */
   const navigationHandler = card => {
     history.push(`/episodes/${card.id}`, card);
   };

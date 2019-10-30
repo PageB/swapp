@@ -11,22 +11,39 @@ class LoginForm extends Component {
     this.state = { email: '', password: '', errorMessage: this.props.error };
   }
 
+  /**
+   * Update corresponding input on change.
+   *
+   * @method handleInputChange
+   * @param {Object} event
+   */
   handleInputChange = ({ currentTarget }) => {
     this.setState({ [currentTarget.name]: currentTarget.value });
   };
 
+  /**
+   * Call login action on form submit.
+   *
+   * @method handleInputChange
+   * @param {Object} event
+   */
   handleSubmit = e => {
     e.preventDefault();
     this.props.login({ variables: { email: this.state.email, password: this.state.password } });
   };
 
+  /**
+   * Render lifecycle hook.
+   *
+   * @method render
+   */
   render() {
     const { email, password, errorMessage } = this.state;
 
     const LoginErrorMessage = errorMessage ? (
       <p className={styles.ErrorMessage}>{errorMessage}</p>
     ) : (
-      <p></p>
+      <></>
     );
 
     return (

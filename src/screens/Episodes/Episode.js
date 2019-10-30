@@ -30,6 +30,12 @@ const Episode = () => {
   const { episode } = data;
   const { people } = episode;
 
+  /**
+   * Fetch more episode to people relation
+   * and update current state on success.
+   *
+   * @method loadMore
+   */
   const loadMore = () => {
     fetchMore({
       variables: { id: episodeId, first: 5, after: people.pageInfo.endCursor },

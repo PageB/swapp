@@ -24,10 +24,20 @@ class App extends Component {
     theme: 'DarkTheme',
   };
 
+  /**
+   * componentDidMount lifecycle hook.
+   *
+   * @method componentDidMount
+   */
   componentDidMount() {
     document.body.classList.add('DarkTheme');
   }
 
+  /**
+   * componentDidMount lifecycle hook.
+   *
+   * @method componentDidMount
+   */
   componentWillUnmount() {
     document.body.classList.remove('DarkTheme');
     document.body.classList.remove('LightTheme');

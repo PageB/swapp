@@ -28,6 +28,12 @@ const Character = () => {
     person: { starships },
   } = data;
 
+  /**
+   * Navigate user with react-router.
+   *
+   * @method navigationHandler
+   * @param {Object} card
+   */
   const navigationHandler = card => {
     history.push(`/starships/${card.id}`, card);
   };

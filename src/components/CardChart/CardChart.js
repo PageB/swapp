@@ -21,6 +21,12 @@ const CardChart = props => {
     edge => edge.node.starshipClass === props.starship.starshipClass,
   );
 
+  /**
+   * Find all values by property key and return the max value.
+   *
+   * @method findMaxClassValuePerProperty
+   * @param {String} property
+   */
   const findMaxClassValuePerProperty = property => {
     return Math.max(
       ...filteredStarshipsByClass.map(starship =>

@@ -24,6 +24,12 @@ const Characters = () => {
     allPeople: { edges, pageInfo },
   } = data;
 
+  /**
+   * Fetch more episode to people relation
+   * and update current state on success.
+   *
+   * @method loadMore
+   */
   const loadMore = () => {
     fetchMore({
       variables: { after: pageInfo.endCursor },

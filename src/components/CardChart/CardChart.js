@@ -2,13 +2,12 @@ import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import Chart from 'react-apexcharts';
 import PropTypes from 'prop-types';
-import { ALL_STARSHIPS } from '../../queries/starships';
-import Loading from '../../components/Loading/Loading';
-import LoadingError from '../../components/LoadingError/LoadingError';
 
+import { Loading, LoadingError } from '../../components';
+import { ALL_STARSHIPS } from '../../queries/starships';
 import styles from './CardChart.module.scss';
 
-const CardChart = props => {
+const CardChart = ({ theme, starship }) => {
   const { data, error, loading } = useQuery(ALL_STARSHIPS);
 
   if (loading) return <Loading />;
@@ -19,9 +18,15 @@ const CardChart = props => {
   } = data;
 
   const filteredStarshipsByClass = edges.filter(
-    edge => edge.node.starshipClass === props.starship.starshipClass,
+    edge => edge.node.starshipClass === starship.starshipClass,
   );
 
+  /**
+   * Find all values by property key and return the max value.
+   *
+   * @method findMaxClassValuePerProperty
+   * @param {String} property
+   */
   const findMaxClassValuePerProperty = property => {
     return Math.max(
       ...filteredStarshipsByClass.map(starship =>
@@ -68,13 +73,13 @@ const CardChart = props => {
   };
   const series = [
     {
-      name: props.starship.name,
+      name: starship.name,
       data: [
-        props.starship.maxMLPerHour !== null ? props.starship.maxMLPerHour : 0,
-        props.starship.cost !== null ? props.starship.cost : 0,
-        props.starship.crew !== null ? props.starship.crew : 0,
-        props.starship.maxAtmosphericSpeed !== null ? props.starship.maxAtmosphericSpeed : 0,
-        props.starship.hyperdriveRating !== null ? props.starship.hyperdriveRating : 0,
+        starship.maxMLPerHour !== null ? starship.maxMLPerHour : 0,
+        starship.cost !== null ? starship.cost : 0,
+        starship.crew !== null ? starship.crew : 0,
+        starship.maxAtmosphericSpeed !== null ? starship.maxAtmosphericSpeed : 0,
+        starship.hyperdriveRating !== null ? starship.hyperdriveRating : 0,
       ],
     },
     {
@@ -90,7 +95,7 @@ const CardChart = props => {
   ];
 
   return (
-    <div className={[styles.Chart, styles[props.theme]].join(' ')}>
+    <div className={[styles.Chart, styles[theme]].join(' ')}>
       <Chart options={options} series={series} type="radar" height="350" />
     </div>
   );

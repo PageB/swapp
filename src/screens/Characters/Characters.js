@@ -1,12 +1,9 @@
 import React, { Fragment, useContext } from 'react';
-import ThemeContext from '../../contexts/ThemeContext';
 import { useHistory } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
-import CardList from '../../components/CardList/CardList';
-import CardLink from '../../components/CardLink/CardLink';
-import Loading from '../../components/Loading/Loading';
-import LoadingError from '../../components/LoadingError/LoadingError';
-import Button from '../../components/Button/Button';
+
+import { Button, CardList, CardLink, Loading, LoadingError } from '../../components';
+import ThemeContext from '../../contexts/ThemeContext';
 import { ALL_CHARACTERS } from '../../queries/characters';
 
 const Characters = () => {
@@ -21,6 +18,12 @@ const Characters = () => {
     allPeople: { edges, pageInfo },
   } = data;
 
+  /**
+   * Fetch more episode to people relation
+   * and update current state on success.
+   *
+   * @method loadMore
+   */
   const loadMore = () => {
     fetchMore({
       variables: { after: pageInfo.endCursor },

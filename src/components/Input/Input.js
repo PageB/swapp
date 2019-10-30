@@ -3,15 +3,16 @@ import PropTypes from 'prop-types';
 
 import styles from './Input.module.scss';
 
-const Input = props => {
+const Input = ({ type, placeholder, name, value, autocomplete, onChange }) => {
   return (
     <input
       className={styles.Input}
-      type={props.type}
-      placeholder={props.placeholder}
-      name={props.name}
-      value={props.value}
-      onChange={props.onChange}
+      type={type}
+      placeholder={placeholder}
+      name={name}
+      value={value}
+      autoComplete={autocomplete}
+      onChange={onChange}
     />
   );
 };
@@ -21,6 +22,7 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   name: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  autoComplete: PropTypes.string,
   onChange: PropTypes.func,
 };
 

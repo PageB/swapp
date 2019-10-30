@@ -1,4 +1,8 @@
+## StarWars App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Project set up
 
 ## Available Scripts
 
@@ -17,52 +21,53 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### `npm run coverage`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://create-react-app.dev/docs/running-tests/) for more information.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### `npm run format`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Launches the prettier addon runner in the interactive watch mode.<br />
+Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.<br />
+See the section about [running tests](https://github.com/prettier/prettier) for more information.
 
-### `npm run eject`
+## Huskey set up
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `pre-commit` hook integration
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Hook is triggered automatically on git commit interaction in the terminal. Hook run commit-check script which launches all linter rules runner and prettier runner.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### `pre-push` hook integration
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* Hook is triggered automatically on git push interaction in the terminal. Hook run push-check script which launches all tests.
 
-## Learn More
+## Naming Conventions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Component Naming**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  All base components should be created as pods:
 
-### Code Splitting
+  Example:
+  ```
+  components/CardCharacter/
+  |- CardCharacter.js
+  |- CardCharacter.module.scss
+  |- CardCharacter.test.js
+  ```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## API Resources
 
-### Analyzing the Bundle Size
+* [Star Wars API](https://swapp.st6.io/graphql)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Useful Tools
 
-### Making a Progressive Web App
+* Linting extension
+  * [ESlint](https://github.com/eslint/eslint)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+* Development Browser Extensions
+  * [Apollo Client Developer Tools](https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm)
 
-### Advanced Configuration
+## Developers Best Friends
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* [Frequent git mistakes](https://ohshitgit.com)

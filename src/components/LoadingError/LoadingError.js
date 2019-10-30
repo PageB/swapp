@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Image from './../../assets/images/error.gif';
-
 import styles from './LoadingError.module.scss';
 
 const LoadingError = () => {

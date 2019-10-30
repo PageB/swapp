@@ -3,15 +3,12 @@ import PropTypes from 'prop-types';
 
 import styles from './CardLink.module.scss';
 
-const cardLink = props => {
+const cardLink = ({ theme, card, navigate }) => {
   return (
-    <div
-      className={[styles.Card, styles[props.theme]].join(' ')}
-      onClick={() => props.navigate(props.card.node)}
-    >
-      <img className={styles.Card__Image} src={props.card.node.image} alt={props.card.node.name} />
+    <div className={[styles.Card, styles[theme]].join(' ')} onClick={() => navigate(card.node)}>
+      <img className={styles.Card__Image} src={card.node.image} alt={card.node.name} />
       <div className={styles.Card__Title}>
-        <p className={styles.Card__Text}>{props.card.node.name}</p>
+        <p className={styles.Card__Text}>{card.node.name}</p>
       </div>
     </div>
   );

@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 
 import styles from './CardEpisode.module.scss';
 
-const cardEpisode = props => {
+const cardEpisode = ({ theme, card: episode, navigate }) => {
   return (
     <div
-      className={[styles.CardEpisode, styles[props.theme]].join(' ')}
-      onClick={() => props.navigate(props.card.node)}
+      className={[styles.CardEpisode, styles[theme]].join(' ')}
+      onClick={() => navigate(episode.node)}
     >
       <img
         className={styles.CardEpisode__Image}
-        src={props.card.node.image}
-        alt={props.card.node.title}
+        src={episode.node.image}
+        alt={episode.node.title}
       />
       <div className={styles.CardEpisode__Details}>
-        <p className={styles.CardEpisode__Title}>{props.card.node.title}</p>
-        <p className={styles.CardEpisode__Summary}>{props.card.node.openingCrawl}</p>
+        <p className={styles.CardEpisode__Title}>{episode.node.title}</p>
+        <p className={styles.CardEpisode__Summary}>{episode.node.openingCrawl}</p>
       </div>
     </div>
   );

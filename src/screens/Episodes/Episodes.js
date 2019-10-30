@@ -1,11 +1,9 @@
 import React, { useContext } from 'react';
-import ThemeContext from '../../contexts/ThemeContext';
 import { useHistory } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
-import CardList from '../../components/CardList/CardList';
-import CardEpisode from '../../components/CardEpisode/CardEpisode';
-import Loading from '../../components/Loading/Loading';
-import LoadingError from '../../components/LoadingError/LoadingError';
+
+import { CardList, CardEpisode, Loading, LoadingError } from '../../components';
+import ThemeContext from '../../contexts/ThemeContext';
 import { ALL_EPISODES } from '../../queries/episodes';
 
 const Episodes = () => {
@@ -20,6 +18,12 @@ const Episodes = () => {
     allEpisodes: { edges },
   } = data;
 
+  /**
+   * Navigate user with react-router.
+   *
+   * @method navigationHandler
+   * @param {Object} card
+   */
   const navigationHandler = card => {
     history.push(`/episodes/${card.id}`, card);
   };

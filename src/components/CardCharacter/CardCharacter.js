@@ -1,19 +1,19 @@
 import React from 'react';
-import CardRowData from '../CardRowData/CardRowData';
 import PropTypes from 'prop-types';
 
+import CardRowData from '../CardRowData/CardRowData';
 import styles from './CardCharacter.module.scss';
 
-const cardCharacter = props => {
+const cardCharacter = ({ theme, card: character }) => {
   return (
-    <div className={[styles.Card, styles[props.theme]].join(' ')}>
-      <p className={styles.Card__Title}>{props.card.name}</p>
-      <img className={styles.Card__Image} src={props.card.image} alt={props.card.name} />
+    <div className={[styles.Card, styles[theme]].join(' ')}>
+      <p className={styles.Card__Title}>{character.name}</p>
+      <img className={styles.Card__Image} src={character.image} alt={character.name} />
       <div className={styles.Card__TextDetails}>
-        <CardRowData label="Height: ">{props.card.height}</CardRowData>
-        <CardRowData label="Weight: ">{props.card.mass}</CardRowData>
-        <CardRowData label="Species: ">{props.card.species.name}</CardRowData>
-        <CardRowData label="Home World: ">{props.card.homeworld.name}</CardRowData>
+        <CardRowData label="Height: ">{character.height}</CardRowData>
+        <CardRowData label="Weight: ">{character.mass}</CardRowData>
+        <CardRowData label="Species: ">{character.species.name}</CardRowData>
+        <CardRowData label="Home World: ">{character.homeworld.name}</CardRowData>
       </div>
     </div>
   );

@@ -1,14 +1,10 @@
 import React, { useContext } from 'react';
-import ThemeContext from '../../contexts/ThemeContext';
 import { useHistory, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
-import Loading from '../../components/Loading/Loading';
-import LoadingError from '../../components/LoadingError/LoadingError';
-import CardList from '../../components/CardList/CardList';
-import CardLink from '../../components/CardLink/CardLink';
-import CardCharacter from '../../components/CardCharacter/CardCharacter';
-import { CHARACTER } from '../../queries/characters';
 
+import { CardList, CardLink, CardCharacter, Loading, LoadingError } from '../../components';
+import ThemeContext from '../../contexts/ThemeContext';
+import { CHARACTER } from '../../queries/characters';
 import styles from './Character.module.scss';
 
 const Character = () => {
@@ -26,6 +22,12 @@ const Character = () => {
     person: { starships },
   } = data;
 
+  /**
+   * Navigate user with react-router.
+   *
+   * @method navigationHandler
+   * @param {Object} card
+   */
   const navigationHandler = card => {
     history.push(`/starships/${card.id}`, card);
   };

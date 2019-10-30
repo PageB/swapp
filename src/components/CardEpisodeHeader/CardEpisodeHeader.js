@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import styles from './CardEpisodeHeader.module.scss';
 
-const cardEpisodeHeader = props => {
+const cardEpisodeHeader = ({ theme, card: episode }) => {
   return (
-    <div className={[styles.Card, styles[props.theme]].join(' ')}>
-      <img className={styles.Card__Image} src={props.card.image} alt={props.card.title} />
+    <div className={[styles.Card, styles[theme]].join(' ')}>
+      <img className={styles.Card__Image} src={episode.image} alt={episode.title} />
       <div className={styles.Card__Details}>
-        <p className={styles.Card__Title}>{props.card.episode}</p>
-        <p className={styles.Card__SubTitle}>{props.card.title}</p>
+        <p className={styles.Card__Title}>{episode.episode}</p>
+        <p className={styles.Card__SubTitle}>{episode.title}</p>
       </div>
     </div>
   );

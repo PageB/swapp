@@ -2,10 +2,9 @@ import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import Chart from 'react-apexcharts';
 import PropTypes from 'prop-types';
-import { ALL_STARSHIPS } from '../../queries/starships';
-import Loading from '../../components/Loading/Loading';
-import LoadingError from '../../components/LoadingError/LoadingError';
 
+import { Loading, LoadingError } from '../../components';
+import { ALL_STARSHIPS } from '../../queries/starships';
 import styles from './CardChart.module.scss';
 
 const CardChart = props => {

@@ -1,7 +1,7 @@
 import React from 'react';
-import CardRowData from '../CardRowData/CardRowData';
 import PropTypes from 'prop-types';
 
+import CardRowData from '../CardRowData/CardRowData';
 import styles from './CardCharacter.module.scss';
 
 const cardCharacter = props => {

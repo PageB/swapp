@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CardRowData from '../CardRowData/CardRowData';
 
+import CardRowData from '../CardRowData/CardRowData';
 import styles from './CardEpisodeSummary.module.scss';
 
 const cardEpisodeSummary = props => {

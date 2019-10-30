@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { useMutation } from '@apollo/react-hooks';
 
 import { LoginForm, Loading } from '../../components';
-
 import ThemeContext from '../../contexts/ThemeContext';
 
 import gql from 'graphql-tag.macro';

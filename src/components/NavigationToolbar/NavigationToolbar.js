@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+
 import ThemeContext from '../../contexts/ThemeContext';
 import SWLogo from '../../assets/images/SWLogo.png';
-import { Link } from 'react-router-dom';
-
 import styles from './NavigationToolbar.module.scss';
 
 const NavigationToolbar = props => {

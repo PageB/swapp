@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Spinner from './../../assets/images/giphy.gif';
-
 import styles from './Loading.module.scss';
 
 const Loading = props => {

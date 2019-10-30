@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 import styles from './CardRowData.module.scss';
 
-const cardRowData = props => {
+const cardRowData = ({ theme, label, children }) => {
   return (
-    <p className={[styles.Row, styles[props.theme]].join(' ')}>
-      <span className={styles.Row__DataLabel}>{props.label}</span>
-      <span className={styles.Row__DataValue}>{props.children}</span>
+    <p className={[styles.Row, styles[theme]].join(' ')}>
+      <span className={styles.Row__DataLabel}>{label}</span>
+      <span className={styles.Row__DataValue}>{children}</span>
     </p>
   );
 };

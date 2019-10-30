@@ -2,13 +2,7 @@ import React, { Fragment, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 
-import {
-  Button,
-  CardList,
-  CardLink,
-  Loading,
-  LoadingError
-} from '../../components';
+import { Button, CardList, CardLink, Loading, LoadingError } from '../../components';
 import ThemeContext from '../../contexts/ThemeContext';
 import { ALL_CHARACTERS } from '../../queries/characters';
 

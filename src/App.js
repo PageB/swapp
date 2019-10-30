@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { ApolloProvider } from '@apollo/react-hooks';
-import { ThemeProvider } from './contexts/ThemeContext';
 import { BrowserRouter as Router } from 'react-router-dom';
 import ApolloClient from 'apollo-boost';
 
-import Nav from './components/NavigationToolbar/NavigationToolbar';
 import Home from './Home';
 
 const client = new ApolloClient({
@@ -20,10 +18,6 @@ const client = new ApolloClient({
 });
 
 class App extends Component {
-  state = {
-    theme: 'DarkTheme',
-  };
-
   /**
    * componentDidMount lifecycle hook.
    *
@@ -44,23 +38,6 @@ class App extends Component {
   }
 
   /**
-   * Change body class names based on theme selection
-   *
-   * @method themeChangeHandler
-   */
-  themeChangeHandler = () => {
-    if (this.state.theme === 'DarkTheme') {
-      document.body.classList.add('LightTheme');
-      document.body.classList.remove('DarkTheme');
-      this.setState({ theme: 'LightTheme' });
-    } else {
-      document.body.classList.add('DarkTheme');
-      document.body.classList.remove('LightTheme');
-      this.setState({ theme: 'DarkTheme' });
-    }
-  };
-
-  /**
    * Render lifecycle hook
    *
    * @method render
@@ -69,12 +46,9 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
-        <ThemeProvider value={this.state.theme}>
-          <Router>
-            <Nav themeChanged={this.themeChangeHandler} />
-            <Home />
-          </Router>
-        </ThemeProvider>
+        <Router>
+          <Home />
+        </Router>
       </ApolloProvider>
     );
   }

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useHistory, useParams, useLocation } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 
 import {
@@ -17,7 +17,6 @@ import styles from './Episode.module.scss';
 
 const Episode = () => {
   const theme = useContext(ThemeContext);
-  const { state } = useLocation();
   const { episodeId } = useParams();
   const history = useHistory();
   const { data, error, loading, fetchMore } = useQuery(EPISODE, {
@@ -63,8 +62,8 @@ const Episode = () => {
 
   return (
     <div className={styles.EpisodeCard}>
-      <CardEpisodeHeader card={state} theme={theme} />
-      <CardEpisodeSummary card={state} theme={theme} />
+      <CardEpisodeHeader card={episode} theme={theme} />
+      <CardEpisodeSummary card={episode} theme={theme} />
       <CardList
         theme={theme}
         cards={people.edges}

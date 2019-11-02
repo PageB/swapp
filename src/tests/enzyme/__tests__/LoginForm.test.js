@@ -17,7 +17,7 @@ describe('LoginForm Component', () => {
   it('should call login when form is submited', () => {
     const preventDefault = jest.fn();
     const login = jest.fn();
-    const wrapper = mount(<LoginForm login={login}/>);
+    const wrapper = mount(<LoginForm login={login} />);
 
     wrapper.find('form').simulate('submit', { preventDefault });
 
@@ -26,16 +26,27 @@ describe('LoginForm Component', () => {
   });
 
   it('should change input value on change event', () => {
-    const wrapper = mount(<LoginForm/>);
+    const wrapper = mount(<LoginForm />);
 
-    wrapper.find('input').first().simulate('focus');
-    wrapper.find('input').first().simulate('change', { target: { value: 'First line', name: 'email' } });
+    wrapper
+      .find('input')
+      .first()
+      .simulate('focus');
+    wrapper
+      .find('input')
+      .first()
+      .simulate('change', { target: { value: 'First line', name: 'email' } });
 
-    expect(wrapper.find('input').first().instance().value).toBe('First line');
+    expect(
+      wrapper
+        .find('input')
+        .first()
+        .instance().value,
+    ).toBe('First line');
   });
 
   it('should show error message', () => {
-    const wrapper = mount(<LoginForm error={'Incorrect email or password.'}/>);
+    const wrapper = mount(<LoginForm error={'Incorrect email or password.'} />);
 
     expect(wrapper.find('.ErrorMessage').text()).toBe('Incorrect email or password.');
   });

@@ -21,12 +21,12 @@ const mocks = [
       query: SIGN_IN,
       variables: {
         email: 'martin@mail.com',
-        password: 'martin'
+        password: 'martin',
       },
     },
     result: {
       data: {
-        token: 'adfadfadsgdashahashah'
+        token: 'adfadfadsgdashahashah',
       },
     },
   },
@@ -44,25 +44,29 @@ describe('Home Component', () => {
 
 describe('Home Component', () => {
   it('should match snapshot with Screen component', () => {
-    localStorage.setItem('token', '12312423423141241341')
+    localStorage.setItem('token', '12312423423141241341');
     const wrapper = shallow(<Home />);
 
     expect(wrapper).toMatchSnapshot();
-    localStorage.removeItem('token')
+    localStorage.removeItem('token');
   });
 });
 
 describe('Home Component is rendered', () => {
   it('should remove token in local storage when user logout', () => {
-    localStorage.setItem('token', '12312423423141241341')
+    localStorage.setItem('token', '12312423423141241341');
     const wrapper = mount(
       <MockedProvider mocks={mocks}>
         <MemoryRouter>
           <Home />
         </MemoryRouter>
-      </MockedProvider>);
+      </MockedProvider>,
+    );
 
-    wrapper.find('a').at(2).simulate('click');
+    wrapper
+      .find('a')
+      .at(2)
+      .simulate('click');
 
     expect(localStorage.getItem('token')).toBe(null);
   });
@@ -92,7 +96,8 @@ describe('Home Component is rendered', () => {
         <MemoryRouter>
           <Home />
         </MemoryRouter>
-      </MockedProvider>);
+      </MockedProvider>,
+    );
 
     expect(wrapper.find('.Toolbar').hasClass('Toolbar DarkTheme')).toBe(true);
 
@@ -105,4 +110,3 @@ describe('Home Component is rendered', () => {
     expect(wrapper.find('.Toolbar').hasClass('Toolbar DarkTheme')).toBe(true);
   });
 });
-

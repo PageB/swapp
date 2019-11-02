@@ -33,4 +33,10 @@ describe('LoginForm Component', () => {
 
     expect(wrapper.find('input').first().instance().value).toBe('First line');
   });
+
+  it('should show error message', () => {
+    const wrapper = mount(<LoginForm error={'Incorrect email or password.'}/>);
+
+    expect(wrapper.find('.ErrorMessage').text()).toBe('Incorrect email or password.');
+  });
 });

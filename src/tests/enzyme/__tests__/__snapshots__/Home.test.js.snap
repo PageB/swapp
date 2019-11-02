@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home Component should match snapshot 1`] = `
+exports[`Home Component should match snapshot with Login component 1`] = `
 <ContextProvider
   value="DarkTheme"
 >
@@ -13,5 +13,19 @@ exports[`Home Component should match snapshot 1`] = `
   <Login
     onLogin={[Function]}
   />
+</ContextProvider>
+`;
+
+exports[`Home Component should match snapshot with Screen component 1`] = `
+<ContextProvider
+  value="DarkTheme"
+>
+  <NavigationToolbar
+    onLogout={[Function]}
+    theme="DarkTheme"
+    themeChanged={[Function]}
+    userAuthenticated={true}
+  />
+  <Screens />
 </ContextProvider>
 `;

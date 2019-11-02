@@ -17,10 +17,13 @@ const Login = ({ onLogin }) => {
   const theme = useContext(ThemeContext);
   const [login, { loading, error = '' }] = useMutation(SIGN_IN, {
     onCompleted: ({ signIn: token }) => {
+      debugger
       localStorage.setItem('token', token.token);
       onLogin(token.token);
     },
-    onError: () => {},
+    onError: (err) => {
+      debugger
+    },
   });
 
   if (loading) return <Loading />;

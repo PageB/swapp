@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Adapter from 'enzyme-adapter-react-16';
-import { shallow, configure } from 'enzyme';
+import { shallow, configure, mount } from 'enzyme';
 import App from '../../../App';
 
 configure({ adapter: new Adapter() });
@@ -19,5 +19,12 @@ describe('App Component', () => {
     const wrapper = shallow(<App />);
 
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should call login when form is submited', () => {
+    document.body.classList.add = jest.fn();
+    mount(<App />);
+
+    expect(document.body.classList.add).toHaveBeenCalledTimes(1);
   });
 });

@@ -17,8 +17,9 @@ class LoginForm extends Component {
    * @method handleInputChange
    * @param {Object} event
    */
-  handleInputChange = ({ currentTarget }) => {
-    this.setState({ [currentTarget.name]: currentTarget.value });
+  handleInputChange = ({ target }) => {
+    debugger
+    this.setState({ [target.name]: target.value });
   };
 
   /**

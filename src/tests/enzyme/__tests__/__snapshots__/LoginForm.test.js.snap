@@ -5,7 +5,6 @@ exports[`LoginForm Component should match snapshot 1`] = `
   className="Form DarkTheme"
   onSubmit={[Function]}
 >
-  <p />
   <Input
     autocomplete="on"
     name="email"

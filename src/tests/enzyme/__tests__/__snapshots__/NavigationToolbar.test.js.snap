@@ -14,17 +14,6 @@ exports[`NavigationToolbar Component should match snapshot 1`] = `
   </div>
   <nav
     className="Toolbar__Menu"
-  >
-    <Link
-      to="/episodes"
-    >
-      Episodes
-    </Link>
-    <Link
-      to="/characters"
-    >
-      Characters
-    </Link>
-  </nav>
+  />
 </header>
 `;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardChart Component should match snapshot 1`] = `
+exports[`CardChart Component should match snapshot with Apollo Provider wrapper 1`] = `
 <ContextConsumer>
   <Component />
 </ContextConsumer>

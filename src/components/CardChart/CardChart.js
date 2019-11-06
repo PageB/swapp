@@ -1,26 +1,10 @@
 import React from 'react';
-import { useQuery } from '@apollo/react-hooks';
 import Chart from 'react-apexcharts';
 import PropTypes from 'prop-types';
 
-import { Loading, LoadingError } from '../../components';
-import { ALL_STARSHIPS } from '../../queries/starships';
 import styles from './CardChart.module.scss';
 
-const CardChart = ({ theme, starship }) => {
-  const { data, error, loading } = useQuery(ALL_STARSHIPS);
-
-  if (loading) return <Loading />;
-  if (error) return <LoadingError />;
-
-  const {
-    allStarships: { edges },
-  } = data;
-
-  const filteredStarshipsByClass = edges.filter(
-    edge => edge.node.starshipClass === starship.starshipClass,
-  );
-
+const CardChart = ({ theme, starship, starships }) => {
   /**
    * Find all values by property key and return the max value.
    *
@@ -28,11 +12,7 @@ const CardChart = ({ theme, starship }) => {
    * @param {String} property
    */
   const findMaxClassValuePerProperty = property => {
-    return Math.max(
-      ...filteredStarshipsByClass.map(starship =>
-        starship.node[property] !== null ? starship.node[property] : 0,
-      ),
-    );
+    return Math.max(...starships.map(ship => (ship[property] !== null ? starship[property] : 0)));
   };
 
   const options = {

@@ -5,6 +5,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { Button, CardList, CardLink, Loading, LoadingError } from '../../components';
 import ThemeContext from '../../contexts/ThemeContext';
 import { ALL_CHARACTERS } from '../../queries/characters';
+import styles from './Characters.module.scss';
 
 const Characters = () => {
   const theme = useContext(ThemeContext);
@@ -55,9 +56,11 @@ const Characters = () => {
         cardNavigation={navigationHandler}
       />
       {pageInfo.hasNextPage && (
-        <Button onClick={loadMore} theme={theme}>
-          Load More
-        </Button>
+        <div className={styles.CharactersList__Button}>
+          <Button onClick={loadMore} theme={theme}>
+            Load More
+          </Button>
+        </div>
       )}
     </Fragment>
   );

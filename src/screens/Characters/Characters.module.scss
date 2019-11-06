@@ -1,0 +1,17 @@
+@import '../../colors.scss';
+
+.DarkTheme {
+  color: $vivid-yellow;
+}
+
+.LightTheme {
+  color: $crayola;
+}
+
+.CharactersList {
+   &__Button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   }
+}

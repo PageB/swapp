@@ -20,8 +20,7 @@ const Login = ({ onLogin }) => {
       localStorage.setItem('token', token.token);
       onLogin(token.token);
     },
-    onError: () => {
-    },
+    onError: () => {},
   });
 
   if (loading) return <Loading />;

@@ -1,7 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardChart Component should match snapshot with Apollo Provider wrapper 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
+exports[`CardChart Component should match snapshot 1`] = `
+<div
+  className="Chart DarkTheme"
+>
+  <r
+    height="350"
+    options={
+      Object {
+        "chart": Object {
+          "background": "#000",
+          "toolbar": Object {
+            "show": false,
+          },
+        },
+        "colors": Array [
+          "#FFE300",
+        ],
+        "dataLabels": Object {
+          "style": Object {
+            "colors": Array [
+              "#4BD5EE",
+            ],
+          },
+        },
+        "labels": Array [
+          "ML",
+          "Cost",
+          "Crew",
+          "Speed",
+          "Rating",
+        ],
+        "markers": Object {
+          "colors": Array [
+            "#fff",
+          ],
+          "size": 4,
+          "strokeColor": "#FF4560",
+          "strokeWidth": 2,
+        },
+        "plotOptions": Object {
+          "radar": Object {
+            "polygons": Object {
+              "connectorColors": "#EFF2F7",
+              "fill": Object {
+                "colors": Array [
+                  "#000000",
+                ],
+              },
+              "strokeColors": "#EFF2F7 ",
+            },
+          },
+        },
+        "yaxis": Object {
+          "show": false,
+          "tickAmount": 5,
+        },
+      }
+    }
+    series={
+      Array [
+        Object {
+          "data": Array [
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+          ],
+          "name": undefined,
+        },
+        Object {
+          "data": Array [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+          ],
+          "name": "Starship Class Max",
+        },
+      ]
+    }
+    type="radar"
+    width="100%"
+  />
+</div>
 `;

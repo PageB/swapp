@@ -1,21 +1,9 @@
 import React, { Component } from 'react';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { BrowserRouter as Router } from 'react-router-dom';
-import ApolloClient from 'apollo-boost';
 
 import Home from './Home';
-
-const client = new ApolloClient({
-  uri: 'https://swapp.st6.io/graphql',
-  request: operation => {
-    const token = localStorage.getItem('token');
-    operation.setContext({
-      headers: {
-        authorization: token ? `Bearer ${token}` : '',
-      },
-    });
-  },
-});
+import client from './client';
 
 class App extends Component {
   /**

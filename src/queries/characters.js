@@ -37,7 +37,14 @@ export const CHARACTER = gql`
           node {
             id
             name
+            model
             image
+            starshipClass
+            cost
+            maxAtmosphericSpeed
+            maxMLPerHour
+            hyperdriveRating
+            crew
           }
         }
       }

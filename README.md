@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This project is deployed with [netify.com](https://www.netlify.com/) here: https://cocky-edison-1ff982.netlify.com/
+Username: demo@st6.io
+Password: demo1234
+
 # Project set up
 
 ## Available Scripts

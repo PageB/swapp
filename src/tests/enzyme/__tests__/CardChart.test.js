@@ -1,6 +1,6 @@
 import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
-import { shallow, configure, mount } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import { starWarsCharacters } from '../../../mock/data';
 import { ApolloProvider } from '@apollo/react-hooks';
 

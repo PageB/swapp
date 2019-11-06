@@ -3,7 +3,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import { shallow, configure, mount } from 'enzyme';
 
 import LoginForm from '../../../components/LoginForm/LoginForm';
-import { setTimeout } from 'timers';
 
 configure({ adapter: new Adapter() });
 

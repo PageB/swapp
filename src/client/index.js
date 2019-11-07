@@ -2,7 +2,7 @@ import ApolloClient from 'apollo-boost';
 require('dotenv').config();
 
 const client = new ApolloClient({
-  uri: process.env.REACT_APP_STAR_WARS_GRAPHQL_ENDPOINT,
+  uri: 'https://swapp.st6.io/graphql',
   request: operation => {
     const token = localStorage.getItem('token');
     operation.setContext({

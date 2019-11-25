@@ -26,7 +26,6 @@ const Login = ({ onLogin }) => {
   const [login, { loading, error = '' }] = useMutation(SIGN_IN, {
     onCompleted: ({ signIn: token }) => {
       localStorage.setItem('token', token.token);
-      onLogin(token.token);
     },
     onError: () => {},
   });
